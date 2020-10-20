@@ -86,18 +86,17 @@ public class EmployeServiceImpl implements IEmployeService {
 	}
 	@Override
 	public void mettreAjourEmailByEmployeId(String email, int employeId) {
-		// TODO Auto-generated method stub
+		employeRepository.mettreAjourEmailByEmployeIdJPQL(email, employeId);
 		
 	}
 	@Override
 	public String getEmployePrenomById(int employeId) {
-		// TODO Auto-generated method stub
-		return null;
+		Employe employeManagedEntity = employeRepository.findById(employeId).get();
+		return employeManagedEntity.getPrenom();
 	}
 	@Override
 	public int getNombreEmployeJPQL() {
-		// TODO Auto-generated method stub
-		return 0;
+		return employeRepository.countemp();
 	}
 	@Override
 	public List<String> getAllEmployeNamesJPQL() {
