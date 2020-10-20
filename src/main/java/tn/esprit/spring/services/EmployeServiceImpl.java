@@ -76,6 +76,10 @@ public class EmployeServiceImpl implements IEmployeService {
 		
 	}
 	
+	public Double getSalaireMoyenByDepartementId(int departementId) {
+		return employeRepository.getSalaireMoyenByDepartementId(departementId);
+	}
+	
 	public void deleteAllContratJPQL() {
         employeRepository.deleteAllContratJPQL();
 	}
