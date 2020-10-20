@@ -9,7 +9,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 
 import tn.esprit.spring.entities.Employe;
-import tn.esprit.spring.entities.Entreprise;
+
 
 
 public interface EmployeRepository extends CrudRepository<Employe, Integer>  {
@@ -21,13 +21,7 @@ public interface EmployeRepository extends CrudRepository<Employe, Integer>  {
     @Query("SELECT nom FROM Employe")
     public List<String> employeNames();
     
-    @Query("Select "
-			+ "DISTINCT emp from Employe emp "
-			+ "join emp.departements dps "
-			+ "join dps.entreprise entrep "
-			+ "where entrep=:entreprise")
-    public List<Employe> getAllEmployeByEntreprisec(@Param("entreprise") Entreprise entreprise);
-    
+  
     @Modifying
     @Transactional
     @Query("UPDATE Employe e SET e.email=:email1 where e.id=:employeId")
@@ -43,12 +37,7 @@ public interface EmployeRepository extends CrudRepository<Employe, Integer>  {
     public float getSalaireByEmployeIdJPQL(@Param("employeId")int employeId);
     
     
-    @Query("Select "
-			+ "DISTINCT AVG(cont.salaire) from Contrat cont "
-			+ "join cont.employe emp "
-			+ "join emp.departements deps "
-			+ "where deps.id=:depId")
-    public Double getSalaireMoyenByDepartementId(@Param("depId")int departementId);
+    
 	
     		
    
