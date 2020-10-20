@@ -95,7 +95,10 @@ public class RestControlEmploye {
 	
 		
 	}
-
-	
+// partie Sarra
+    public List<Timesheet> getTimesheetsByMissionAndDate(Employe employe, Mission mission, Date dateDebut,
+			Date dateFin) {
+		return iemployeservice.getTimesheetsByMissionAndDate(employe, mission, dateDebut, dateFin);
+	}
 	
 }
