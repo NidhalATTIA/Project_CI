@@ -2,8 +2,11 @@ package tn.esprit.spring.entities;
 
 import java.io.Serializable;
 import java.util.List;
+<<<<<<< HEAD
 
 import javax.persistence.CascadeType;
+=======
+>>>>>>> main
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -15,10 +18,14 @@ import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
+<<<<<<< HEAD
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+=======
+import com.fasterxml.jackson.annotation.JsonIgnore;
+>>>>>>> main
 
 
 @Entity
@@ -131,11 +138,19 @@ public class Employe implements Serializable {
 	public Contrat getContrat() {
 		return contrat;
 	}
+<<<<<<< HEAD
 
 	public void setContrat(Contrat contrat) {
 		this.contrat = contrat;
 	}
 
+=======
+
+	public void setContrat(Contrat contrat) {
+		this.contrat = contrat;
+	}
+
+>>>>>>> main
 	public List<Timesheet> getTimesheets() {
 		return timesheets;
 	}
