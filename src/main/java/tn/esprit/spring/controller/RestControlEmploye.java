@@ -41,15 +41,13 @@ public class RestControlEmploye {
 	// http://localhost:8081/SpringMVC/servlet/ajouterEmployer
 	//{"id":1,"nom":"kallel", "prenom":"khaled", "email":"Khaled.kallel@ssiiconsulting.tn", "isActif":true, "role":"INGENIEUR"}
 	
-	@PostMapping("/ajouterEmployer")
-	@ResponseBody
-	public Employe ajouterEmploye(@RequestBody Employe employe)
-	{
-		iemployeservice.ajouterEmploye(employe);
-		return employe;
-	}
-	
 
+
+	
+	
+	
+	// Nidhal partie
+	
 	// http://localhost:8081/SpringMVC/servlet/affecterEmployeADepartement/1/1
 	@PutMapping(value = "/affecterEmployeADepartement/{idemp}/{iddept}") 
 	public void affecterEmployeADepartement(@PathVariable("idemp")int employeId, @PathVariable("iddept")int depId) {
