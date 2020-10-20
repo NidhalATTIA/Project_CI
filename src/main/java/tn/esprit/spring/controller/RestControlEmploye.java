@@ -19,11 +19,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import tn.esprit.spring.entities.Contrat;
 import tn.esprit.spring.entities.Employe;
-import tn.esprit.spring.entities.Entreprise;
 import tn.esprit.spring.entities.Mission;
 import tn.esprit.spring.entities.Timesheet;
 import tn.esprit.spring.services.IEmployeService;
-import tn.esprit.spring.services.IEntrepriseService;
 import tn.esprit.spring.services.ITimesheetService;
 
 @RestController
@@ -32,18 +30,97 @@ public class RestControlEmploye {
 	
 	@Autowired
 	IEmployeService iemployeservice;
-	@Autowired
-	IEntrepriseService ientrepriseservice;
+	
 	@Autowired
 	ITimesheetService itimesheetservice;
 
-	
+	////Raya Partie
 	// http://localhost:8081/SpringMVC/servlet/ajouterEmployer
 	//{"id":1,"nom":"kallel", "prenom":"khaled", "email":"Khaled.kallel@ssiiconsulting.tn", "isActif":true, "role":"INGENIEUR"}
 	
+	@PostMapping("/ajouterEmployer")
+	@ResponseBody
+	public Employe ajouterEmploye(@RequestBody Employe employe)
+	{
+		iemployeservice.ajouterEmploye(employe);
+		return employe;
+	}
 	
 	
-	// Nidhal partie
+	
+	// Modifier email : http://localhost:8081/SpringMVC/servlet/modifyEmail/1/newemail
+	@PutMapping(value = "/modifyEmail/{id}/{newemail}") 
+	@ResponseBody
+	public void mettreAjourEmailByEmployeId(@PathVariable("newemail") String email, @PathVariable("id") int employeId) {
+		iemployeservice.mettreAjourEmailByEmployeId(email, employeId);
+		
+	}
+	
+	 
+	   // URL : http://localhost:8081/SpringMVC/servlet/getEmployePrenomById/2
+	   @GetMapping(value = "getEmployePrenomById/{idemp}")
+	   @ResponseBody
+	   public String getEmployePrenomById(@PathVariable("idemp")int employeId) {
+			return iemployeservice.getEmployePrenomById(employeId);
+		}
+
+	    // URL : http://localhost:8081/SpringMVC/servlet/deleteEmployeById/1
+	    @DeleteMapping("/deleteEmployeById/{idemp}") 
+		@ResponseBody 
+		public void deleteEmployeById(@PathVariable("idemp")int employeId) {
+			iemployeservice.deleteEmployeById(employeId);
+			
+		}
+	    
+	    
+	    // URL : http://localhost:8081/SpringMVC/servlet/getNombreEmployeJPQL
+	    @GetMapping(value = "getNombreEmployeJPQL")
+	    @ResponseBody
+		public int getNombreEmployeJPQL() {
+			
+			return iemployeservice.getNombreEmployeJPQL();
+		}
+
+	    // URL : http://localhost:8081/SpringMVC/servlet/getAllEmployeNamesJPQL
+	    @GetMapping(value = "getAllEmployeNamesJPQL")
+	    @ResponseBody
+		public List<String> getAllEmployeNamesJPQL() {
+			
+			return iemployeservice.getAllEmployeNamesJPQL();
+		}
+	    
+	    
+
+
+	    // Modifier email : http://localhost:8081/SpringMVC/servlet/mettreAjourEmailByEmployeIdJPQL/2/newemail
+	    	@PutMapping(value = "/mettreAjourEmailByEmployeIdJPQL/{id}/{newemail}") 
+	    	@ResponseBody
+	   	public void mettreAjourEmailByEmployeIdJPQL(@PathVariable("newemail") String email, @PathVariable("id") int employeId) {	
+	   	iemployeservice.mettreAjourEmailByEmployeIdJPQL(email, employeId);
+	   		
+	   	}
+
+
+	       // URL : http://localhost:8081/SpringMVC/servlet/getSalaireByEmployeIdJPQL/2
+	       @GetMapping(value = "getSalaireByEmployeIdJPQL/{idemp}")
+	       @ResponseBody
+	   	public float getSalaireByEmployeIdJPQL(@PathVariable("idemp")int employeId) {
+	   		return iemployeservice.getSalaireByEmployeIdJPQL(employeId);
+	   	}
+
+	    
+	   	
+
+	   	 // URL : http://localhost:8081/SpringMVC/servlet/getAllEmployes
+	   	@GetMapping(value = "/getAllEmployes")
+	       @ResponseBody
+	   	public List<Employe> getAllEmployes() {
+	   		
+	   		return iemployeservice.getAllEmployes();
+	   	}
+
+	
+	////////////////// Nidhal partie
 	
 	// http://localhost:8081/SpringMVC/servlet/affecterEmployeADepartement/1/1
 	@PutMapping(value = "/affecterEmployeADepartement/{idemp}/{iddept}") 
@@ -95,7 +172,24 @@ public class RestControlEmploye {
 	
 		
 	}
+    
+    
+    
+   
 
+	
+	
+	
+
+	
+	
+
+	
+	
+  
+  
+
+  
 	
 	
 }
