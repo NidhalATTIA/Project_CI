@@ -92,6 +92,7 @@ public class RestControlEmploye {
 	@ResponseBody
 	public void deleteAllContratJPQL() {
 		iemployeservice.deleteAllContratJPQL();
+	
 		
 	}
 
