@@ -12,16 +12,27 @@ import tn.esprit.spring.entities.Employe;
 
 public interface IEmployeService {
 	
-	
+	public int ajouterEmploye(Employe employe);
+	public void mettreAjourEmailByEmployeId(String email, int employeId);
 	public void affecterEmployeADepartement(int employeId, int depId);
 	public void desaffecterEmployeDuDepartement(int employeId, int depId);
+	public Double getSalaireMoyenByDepartementId(int departementId);
 	public void deleteContratById(int contratId);
 	public int ajouterContrat(Contrat contrat);
 	public void deleteAllContratJPQL();
 	public void affecterContratAEmploye(int contratId, int employeId);
+<<<<<<< HEAD
 	public List<Timesheet> getTimesheetsByMissionAndDate(Employe employe, Mission mission, 
 			Date dateDebut, Date dateFin);
 			
+=======
+	public String getEmployePrenomById(int employeId);
+	public int getNombreEmployeJPQL();
+	public List<String> getAllEmployeNamesJPQL();
+	public void mettreAjourEmailByEmployeIdJPQL(String email, int employeId);
+	public float getSalaireByEmployeIdJPQL(int employeId);
+	public List<Employe> getAllEmployes();
+>>>>>>> branch 'main' of https://github.com/NidhalATTIA/Project_CI.git
 
 	
 

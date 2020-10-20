@@ -15,11 +15,13 @@ import tn.esprit.spring.entities.Departement;
 import tn.esprit.spring.entities.Employe;
 import tn.esprit.spring.repository.ContratRepository;
 import tn.esprit.spring.repository.DepartementRepository;
+import tn.esprit.spring.repository.EmployeRepository;
 
 
 @Service
 public class EmployeServiceImpl implements IEmployeService {
-
+	@Autowired
+	EmployeRepository employeRepository;
 	@Autowired
 	DepartementRepository deptRepoistory;
 	@Autowired
@@ -76,6 +78,42 @@ public class EmployeServiceImpl implements IEmployeService {
 	
 	public void deleteAllContratJPQL() {
         employeRepository.deleteAllContratJPQL();
+	}
+	@Override
+	public int ajouterEmploye(Employe employe) {
+		employeRepository.save(employe);
+		return employe.getId();
+	}
+	@Override
+	public void mettreAjourEmailByEmployeId(String email, int employeId) {
+		employeRepository.mettreAjourEmailByEmployeIdJPQL(email, employeId);
+		
+	}
+	@Override
+	public String getEmployePrenomById(int employeId) {
+		Employe employeManagedEntity = employeRepository.findById(employeId).get();
+		return employeManagedEntity.getPrenom();
+	}
+	@Override
+	public int getNombreEmployeJPQL() {
+		return employeRepository.countemp();
+	}
+	@Override
+	public List<String> getAllEmployeNamesJPQL() {
+		return employeRepository.employeNames();
+	}
+	@Override
+	public void mettreAjourEmailByEmployeIdJPQL(String email, int employeId) {
+		employeRepository.mettreAjourEmailByEmployeIdJPQL(email, employeId);
+		
+	}
+	@Override
+	public float getSalaireByEmployeIdJPQL(int employeId) {
+		return employeRepository.getSalaireByEmployeIdJPQL(employeId);
+	}
+	@Override
+	public List<Employe> getAllEmployes() {
+		return (List<Employe>) employeRepository.findAll();
 	}
 
 	public List<Timesheet> getTimesheetsByMissionAndDate(Employe employe, Mission mission, Date dateDebut,
