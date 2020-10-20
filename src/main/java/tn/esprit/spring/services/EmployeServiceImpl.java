@@ -15,11 +15,13 @@ import tn.esprit.spring.entities.Departement;
 import tn.esprit.spring.entities.Employe;
 import tn.esprit.spring.repository.ContratRepository;
 import tn.esprit.spring.repository.DepartementRepository;
+import tn.esprit.spring.repository.EmployeRepository;
 
 
 @Service
 public class EmployeServiceImpl implements IEmployeService {
-
+	@Autowired
+	EmployeRepository employeRepository;
 	@Autowired
 	DepartementRepository deptRepoistory;
 	@Autowired
@@ -76,6 +78,46 @@ public class EmployeServiceImpl implements IEmployeService {
 	
 	public void deleteAllContratJPQL() {
         employeRepository.deleteAllContratJPQL();
+	}
+	@Override
+	public int ajouterEmploye(Employe employe) {
+		employeRepository.save(employe);
+		return employe.getId();
+	}
+	@Override
+	public void mettreAjourEmailByEmployeId(String email, int employeId) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public String getEmployePrenomById(int employeId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public int getNombreEmployeJPQL() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	@Override
+	public List<String> getAllEmployeNamesJPQL() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public void mettreAjourEmailByEmployeIdJPQL(String email, int employeId) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public float getSalaireByEmployeIdJPQL(int employeId) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	@Override
+	public List<Employe> getAllEmployes() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 
