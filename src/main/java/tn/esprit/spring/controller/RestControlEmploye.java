@@ -41,9 +41,6 @@ public class RestControlEmploye {
 	// http://localhost:8081/SpringMVC/servlet/ajouterEmployer
 	//{"id":1,"nom":"kallel", "prenom":"khaled", "email":"Khaled.kallel@ssiiconsulting.tn", "isActif":true, "role":"INGENIEUR"}
 	
-
-
-	
 	
 	
 	// Nidhal partie
@@ -69,8 +66,6 @@ public class RestControlEmploye {
 	public Double getSalaireMoyenByDepartementId(@PathVariable("iddept")int departementId) {
 		return iemployeservice.getSalaireMoyenByDepartementId(departementId);
 	}
-
-
 
 	
 	
