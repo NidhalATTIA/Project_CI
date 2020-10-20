@@ -16,10 +16,14 @@ public interface IEmployeService {
 	public void mettreAjourEmailByEmployeId(String email, int employeId);
 	public void affecterEmployeADepartement(int employeId, int depId);
 	public void desaffecterEmployeDuDepartement(int employeId, int depId);
+	public Double getSalaireMoyenByDepartementId(int departementId);
 	public void deleteContratById(int contratId);
 	public int ajouterContrat(Contrat contrat);
 	public void deleteAllContratJPQL();
 	public void affecterContratAEmploye(int contratId, int employeId);
+	public List<Timesheet> getTimesheetsByMissionAndDate(Employe employe, Mission mission, 
+			Date dateDebut, Date dateFin);
+			
 	public String getEmployePrenomById(int employeId);
 	public int getNombreEmployeJPQL();
 	public List<String> getAllEmployeNamesJPQL();

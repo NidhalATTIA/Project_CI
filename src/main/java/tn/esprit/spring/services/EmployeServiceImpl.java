@@ -13,6 +13,8 @@ import tn.esprit.spring.entities.Contrat;
 
 import tn.esprit.spring.entities.Departement;
 import tn.esprit.spring.entities.Employe;
+import tn.esprit.spring.entities.Mission;
+import tn.esprit.spring.entities.Timesheet;
 import tn.esprit.spring.repository.ContratRepository;
 import tn.esprit.spring.repository.DepartementRepository;
 import tn.esprit.spring.repository.EmployeRepository;
@@ -76,6 +78,10 @@ public class EmployeServiceImpl implements IEmployeService {
 		
 	}
 	
+	public Double getSalaireMoyenByDepartementId(int departementId) {
+		return employeRepository.getSalaireMoyenByDepartementId(departementId);
+	}
+	
 	public void deleteAllContratJPQL() {
         employeRepository.deleteAllContratJPQL();
 	}
@@ -115,6 +121,7 @@ public class EmployeServiceImpl implements IEmployeService {
 	public List<Employe> getAllEmployes() {
 		return (List<Employe>) employeRepository.findAll();
 	}
+
 	@Override
 	public void deleteEmployeById(int employeId)
 	{
@@ -129,6 +136,13 @@ public class EmployeServiceImpl implements IEmployeService {
 
 		employeRepository.delete(employe);
 	}
+
+
+	@Override
+	public List<Timesheet> getTimesheetsByMissionAndDate(Employe employe, Mission mission, Date dateDebut,Date dateFin) {
+		return timesheetRepository.getTimesheetsByMissionAndDate(employe, mission, dateDebut, dateFin);
+	}
+	
 
 
 }
