@@ -78,6 +78,9 @@ public class EmployeServiceImpl implements IEmployeService {
         employeRepository.deleteAllContratJPQL();
 	}
 
-
+	public List<Timesheet> getTimesheetsByMissionAndDate(Employe employe, Mission mission, Date dateDebut,
+			Date dateFin) {
+		return timesheetRepository.getTimesheetsByMissionAndDate(employe, mission, dateDebut, dateFin);
+	}
 
 }

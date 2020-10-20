@@ -19,7 +19,9 @@ public interface IEmployeService {
 	public int ajouterContrat(Contrat contrat);
 	public void deleteAllContratJPQL();
 	public void affecterContratAEmploye(int contratId, int employeId);
-
+	public List<Timesheet> getTimesheetsByMissionAndDate(Employe employe, Mission mission, 
+			Date dateDebut, Date dateFin);
+			
 
 	
 
