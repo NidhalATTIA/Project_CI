@@ -65,6 +65,14 @@ public class EmployeServiceImpl implements IEmployeService {
 		contratRepoistory.delete(contratManagedEntity);
 
 	}
+	public void affecterContratAEmploye(int contratId, int employeId) {
+		Contrat contratManagedEntity = contratRepoistory.findById(contratId).get();
+		Employe employeManagedEntity = employeRepository.findById(employeId).get();
+
+		contratManagedEntity.setEmploye(employeManagedEntity);
+		contratRepoistory.save(contratManagedEntity);
+		
+	}
 	
 	public void deleteAllContratJPQL() {
         employeRepository.deleteAllContratJPQL();
