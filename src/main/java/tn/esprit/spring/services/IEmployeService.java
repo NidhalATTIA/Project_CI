@@ -15,6 +15,7 @@ public interface IEmployeService {
 	
 	public void affecterEmployeADepartement(int employeId, int depId);
 	public void desaffecterEmployeDuDepartement(int employeId, int depId);
+	public Double getSalaireMoyenByDepartementId(int departementId);
 	public void deleteContratById(int contratId);
 	public int ajouterContrat(Contrat contrat);
 	public void deleteAllContratJPQL();
