@@ -120,7 +120,6 @@ public class IControllerEmployeImpl  {
 
 
 
-
 	public List<Employe> getAllEmployes() {
 		
 		return iemployeservice.getAllEmployes();
