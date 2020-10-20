@@ -7,11 +7,14 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import tn.esprit.spring.entities.Contrat;
+
 
 
 import tn.esprit.spring.entities.Departement;
+import tn.esprit.spring.entities.Employe;
+import tn.esprit.spring.repository.ContratRepository;
 import tn.esprit.spring.repository.DepartementRepository;
-import tn.esprit.spring.repository.EmployeRepository;
 
 
 @Service
@@ -19,6 +22,8 @@ public class EmployeServiceImpl implements IEmployeService {
 
 	@Autowired
 	DepartementRepository deptRepoistory;
+	@Autowired
+	ContratRepository contratRepoistory;
 
 
 	@Transactional	
@@ -51,6 +56,28 @@ public class EmployeServiceImpl implements IEmployeService {
 			}
 		}
 	}
+	public int ajouterContrat(Contrat contrat) {
+		contratRepoistory.save(contrat);
+		return contrat.getReference();
+	}
+	public void deleteContratById(int contratId) {
+		Contrat contratManagedEntity = contratRepoistory.findById(contratId).get();
+		contratRepoistory.delete(contratManagedEntity);
+
+	}
+	public void affecterContratAEmploye(int contratId, int employeId) {
+		Contrat contratManagedEntity = contratRepoistory.findById(contratId).get();
+		Employe employeManagedEntity = employeRepository.findById(employeId).get();
+
+		contratManagedEntity.setEmploye(employeManagedEntity);
+		contratRepoistory.save(contratManagedEntity);
+		
+	}
+	
+	public void deleteAllContratJPQL() {
+        employeRepository.deleteAllContratJPQL();
+	}
+
 
 
 }
