@@ -11,6 +11,7 @@ public class log4j {
 
 		
 		al.getAllContrats();
+		
 	}
 
 	public void getAllContrats() {
@@ -24,5 +25,6 @@ public class log4j {
 			l.error("Erreur dans getAllContrats() : " + e);
 		}
 	}
-
+	
+	
 }
