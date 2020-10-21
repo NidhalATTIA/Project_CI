@@ -14,8 +14,20 @@ public class log4j {
 
 		al.getAllEmployes();
 		al.getSalaireMoyenByDepartementId();
-		
+		al.getAllMission();
 
+	}
+
+	private void getAllMission() {
+		try {
+			l.info("In getAllMission() : ");
+			l.debug("Je vais lancer l'affichage des missions.");
+			l.debug("Je viens de lancer l'affichage des mission. " );
+			l.debug("Je viens de finir l'affichage des mission.");
+			l.info("Out getAllMission() without errors.");
+		} catch (Exception e) {
+			l.error("Erreur dans getAllMission() : " + e);
+		}		
 	}
 
 	public void getAllContrats() {
