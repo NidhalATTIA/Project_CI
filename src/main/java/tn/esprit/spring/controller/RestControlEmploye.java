@@ -32,7 +32,6 @@ import tn.esprit.spring.services.ITimesheetService;
 public class RestControlEmploye {
 	private static final Logger l = Logger.getLogger(log4j.class);
 
-
 	
 	@Autowired
 	IEmployeService iemployeservice;
