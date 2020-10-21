@@ -3,6 +3,7 @@ package tn.esprit.spring.controller;
 import java.util.Date;
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -22,12 +23,15 @@ import tn.esprit.spring.entities.Employe;
 import tn.esprit.spring.entities.Entreprise;
 import tn.esprit.spring.entities.Mission;
 import tn.esprit.spring.entities.Timesheet;
+import tn.esprit.spring.log4j.log4j;
 import tn.esprit.spring.services.IEmployeService;
 import tn.esprit.spring.services.IEntrepriseService;
 import tn.esprit.spring.services.ITimesheetService;
 
 @RestController
 public class RestControlEmploye {
+	private static final Logger l = Logger.getLogger(log4j.class);
+
 
 	
 	@Autowired
@@ -36,7 +40,7 @@ public class RestControlEmploye {
 	IEntrepriseService ientrepriseservice;
 	@Autowired
 	ITimesheetService itimesheetservice;
-
+	
 	
 	// http://localhost:8081/SpringMVC/servlet/ajouterEmployer
 	//{"id":1,"nom":"kallel", "prenom":"khaled", "email":"Khaled.kallel@ssiiconsulting.tn", "isActif":true, "role":"INGENIEUR"}
@@ -46,6 +50,7 @@ public class RestControlEmploye {
 	public Employe ajouterEmploye(@RequestBody Employe employe)
 	{
 		iemployeservice.ajouterEmploye(employe);
+		l.info("employe ajouté ");
 		return employe;
 	}
 	
@@ -54,6 +59,7 @@ public class RestControlEmploye {
 	@ResponseBody
 	public void mettreAjourEmailByEmployeId(@PathVariable("newemail") String email, @PathVariable("id") int employeId) {
 		iemployeservice.mettreAjourEmailByEmployeId(email, employeId);
+		l.info("email modifié ");
 		
 	}
 	// http://localhost:8081/SpringMVC/servlet/affecterEmployeADepartement/1/1
@@ -76,6 +82,8 @@ public class RestControlEmploye {
 	@ResponseBody
 	public int ajouterContrat(@RequestBody Contrat contrat) {
 		iemployeservice.ajouterContrat(contrat);
+		l.info("les contrats ajoutés :"+contrat);
+
 		return contrat.getReference();
 	}
 	
@@ -92,7 +100,9 @@ public class RestControlEmploye {
    @GetMapping(value = "getEmployePrenomById/{idemp}")
    @ResponseBody
    public String getEmployePrenomById(@PathVariable("idemp")int employeId) {
+	   l.info("doneeee");
 		return iemployeservice.getEmployePrenomById(employeId);
+		
 	}
 
     // URL : http://localhost:8081/SpringMVC/servlet/deleteEmployeById/1
@@ -148,6 +158,8 @@ public class RestControlEmploye {
 	@ResponseBody
 	public void deleteAllContratJPQL() {
 		iemployeservice.deleteAllContratJPQL();
+		l.info("contrat supprimé");
+
 		
 	}
 
@@ -162,6 +174,7 @@ public class RestControlEmploye {
     @GetMapping(value = "getSalaireMoyenByDepartementId/{iddept}")
     @ResponseBody
 	public Double getSalaireMoyenByDepartementId(@PathVariable("iddept")int departementId) {
+    	l.info("les departement sont ajoutés :"+departementId);
 		return iemployeservice.getSalaireMoyenByDepartementId(departementId);
 	}
 

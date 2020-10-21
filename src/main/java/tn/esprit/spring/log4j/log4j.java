@@ -9,6 +9,9 @@ public class log4j {
 	public static void main(String[] args) {
 		log4j al = new log4j();
 		al.getAllContrats();
+		al.getAllEmployes();
+		al.getSalaireMoyenByDepartementId();
+		
 	}
 
 	public void getAllContrats() {
@@ -24,4 +27,30 @@ public class log4j {
 	}
 	
 
+	public void getAllEmployes() {
+		try {
+			l.info("In getAllEmployes() : ");
+			l.debug("Je vais lancer l'ajout des Employes.");
+			l.debug("Je viens de lancer l'ajout des employes. " );
+			l.debug("Je viens de finir l'ajout des employes.");
+			l.info("Out getAllContrats() without employes.");
+		} catch (Exception e) {
+			l.error("Erreur dans getAllContrats() : " + e);
+		}
+	}
+	
+	public void getSalaireMoyenByDepartementId() {
+		try {
+			l.info("In getSalaireMoyenByDepartementId() : ");
+			l.debug("Je vais lancer l'ajout des departements.");
+			l.debug("Je viens de lancer l'ajout des departements. " );
+			l.debug("Je viens de finir l'ajout des departement.");
+			l.info("Out getAllContrats() without departement.");
+		} catch (Exception e) {
+			l.error("Erreur dans getSalaireMoyenByDepartementId() : " + e);
+		}
+	}
+
+
+	
 }
