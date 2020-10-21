@@ -11,6 +11,7 @@ public class log4j {
 
 		
 		al.getAllContrats();
+		al.getAllEmployes();
 		
 	}
 
@@ -25,6 +26,17 @@ public class log4j {
 			l.error("Erreur dans getAllContrats() : " + e);
 		}
 	}
-	
+	public void getAllEmployes() {
+		try {
+			l.info("In getAllEmployes() : ");
+			l.debug("Je vais lancer l'ajout des Employes.");
+			l.debug("Je viens de lancer l'ajout des employes. " );
+			l.debug("Je viens de finir l'ajout des employes.");
+			l.info("Out getAllContrats() without employes.");
+		} catch (Exception e) {
+			l.error("Erreur dans getAllContrats() : " + e);
+		}
+	}
+
 	
 }
