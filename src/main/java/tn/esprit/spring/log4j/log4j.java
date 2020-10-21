@@ -8,12 +8,26 @@ public class log4j {
 
 	public static void main(String[] args) {
 		log4j al = new log4j();
-
-		
 		al.getAllContrats();
+
+		al.getAllTimesheet();
+
 		al.getAllEmployes();
 		al.getSalaireMoyenByDepartementId();
-		
+		al.getAllMission();
+
+	}
+
+	private void getAllMission() {
+		try {
+			l.info("In getAllMission() : ");
+			l.debug("Je vais lancer l'affichage des missions.");
+			l.debug("Je viens de lancer l'affichage des mission. " );
+			l.debug("Je viens de finir l'affichage des mission.");
+			l.info("Out getAllMission() without errors.");
+		} catch (Exception e) {
+			l.error("Erreur dans getAllMission() : " + e);
+		}		
 	}
 
 	public void getAllContrats() {
@@ -28,6 +42,18 @@ public class log4j {
 		}
 	}
 	
+	public void getAllTimesheet() {
+		try {
+			l.info("In getAllTimesheet() : ");
+			l.debug("Je vais lancer l'ajout des timesheet.");
+			l.debug("Je viens de lancer l'ajout des timesheet. " );
+			l.debug("Je viens de finir l'ajout des timesheet.");
+			l.info("Out getAllTimesheet() without errors.");
+		} catch (Exception e) {
+			l.error("Erreur dans getAllTimesheet() : " + e);
+		}
+	}
+
 	public void getAllEmployes() {
 		try {
 			l.info("In getAllEmployes() : ");
@@ -51,6 +77,7 @@ public class log4j {
 			l.error("Erreur dans getSalaireMoyenByDepartementId() : " + e);
 		}
 	}
+
 
 	
 }
