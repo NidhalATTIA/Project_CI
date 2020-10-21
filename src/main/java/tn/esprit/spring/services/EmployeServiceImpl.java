@@ -34,8 +34,10 @@ public class EmployeServiceImpl implements IEmployeService {
 	TimesheetRepository timesheetRepository;
 
 	public int ajouterEmploye(Employe employe) {
+		l.debug("Je viens de lancer l'ajout des employes. " );
 		employeRepository.save(employe);
 		l.info("Ajout done!!!! ");
+		
 		return employe.getId();
 	}
 
