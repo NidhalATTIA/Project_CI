@@ -12,6 +12,7 @@ public class log4j {
 		
 		al.getAllContrats();
 		al.getAllEmployes();
+		al.getSalaireMoyenByDepartementId();
 		
 	}
 
@@ -26,6 +27,7 @@ public class log4j {
 			l.error("Erreur dans getAllContrats() : " + e);
 		}
 	}
+	
 	public void getAllEmployes() {
 		try {
 			l.info("In getAllEmployes() : ");
@@ -35,6 +37,18 @@ public class log4j {
 			l.info("Out getAllContrats() without employes.");
 		} catch (Exception e) {
 			l.error("Erreur dans getAllContrats() : " + e);
+		}
+	}
+	
+	public void getSalaireMoyenByDepartementId() {
+		try {
+			l.info("In getSalaireMoyenByDepartementId() : ");
+			l.debug("Je vais lancer l'ajout des departements.");
+			l.debug("Je viens de lancer l'ajout des departements. " );
+			l.debug("Je viens de finir l'ajout des departement.");
+			l.info("Out getAllContrats() without departement.");
+		} catch (Exception e) {
+			l.error("Erreur dans getSalaireMoyenByDepartementId() : " + e);
 		}
 	}
 
