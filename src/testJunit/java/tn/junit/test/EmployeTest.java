@@ -9,8 +9,6 @@ public class EmployeTest {
 	
 	
 	EmployeServiceImpl employe=new EmployeServiceImpl();
-	TimesheetImpl timeS = new TimesheetImpl();
-	
 
 	@Test
 	public void testAjoutContrat() {
@@ -22,7 +20,7 @@ public class EmployeTest {
 	}
 	@Test
 	public void testAjoutTimesheet() {
-		assertNotNull(timeS.ajouterTimesheet(timeS));
+		assertNotNull(employe.getTimesheetsByMissionAndDate(employe,mission,dateDebut,dateFin));
 	}
 	
 	
