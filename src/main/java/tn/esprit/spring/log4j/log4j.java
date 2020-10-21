@@ -9,6 +9,7 @@ public class log4j {
 	public static void main(String[] args) {
 		log4j al = new log4j();
 		al.getAllContrats();
+		al.getAllTimesheet();
 	}
 
 	public void getAllContrats() {
@@ -23,5 +24,16 @@ public class log4j {
 		}
 	}
 	
+	public void getAllTimesheet() {
+		try {
+			l.info("In getAllTimesheet() : ");
+			l.debug("Je vais lancer l'ajout des timesheet.");
+			l.debug("Je viens de lancer l'ajout des timesheet. " );
+			l.debug("Je viens de finir l'ajout des timesheet.");
+			l.info("Out getAllTimesheet() without errors.");
+		} catch (Exception e) {
+			l.error("Erreur dans getAllTimesheet() : " + e);
+		}
+	}
 
 }
