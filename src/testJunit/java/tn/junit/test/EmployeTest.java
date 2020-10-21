@@ -22,6 +22,9 @@ public class EmployeTest {
 	public void testAjoutTimesheet() {
 		assertNotNull(employe.getTimesheetsByMissionAndDate(employe,mission,dateDebut,dateFin));
 	}
-	
+	@Test
+	public void testaffecterEmployeADepartement() {
+		assertNotNull(employe.affecterEmployeADepartement(employe));
+	}
 	
 }
