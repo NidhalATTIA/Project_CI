@@ -173,10 +173,13 @@ public class RestControlEmploye {
 		return iemployeservice.getSalaireMoyenByDepartementId(departementId);
 	}
 
-	
+	///// sarra
 	//TODO
 	public List<Timesheet> getTimesheetsByMissionAndDate(Employe employe, Mission mission, Date dateDebut,
 			Date dateFin) {
+		
+		l.info("les mission sont affichées  ");
+
 		return iemployeservice.getTimesheetsByMissionAndDate(employe, mission, dateDebut, dateFin);
 	}
 
