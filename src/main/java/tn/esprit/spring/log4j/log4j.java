@@ -8,9 +8,8 @@ public class log4j {
 
 	public static void main(String[] args) {
 		log4j al = new log4j();
-
-		
 		al.getAllContrats();
+		al.getAllTimesheets();
 	}
 
 	public void getAllContrats() {
@@ -22,6 +21,18 @@ public class log4j {
 			l.info("Out getAllContrats() without errors.");
 		} catch (Exception e) {
 			l.error("Erreur dans getAllContrats() : " + e);
+		}
+	}
+	
+	public void getAllTimesheets() {
+		try {
+			l.info("In getAllTimesheets() : ");
+			l.debug("Je vais lancer l'ajout des timesheets.");
+			l.debug("Je viens de lancer l'ajout des timesheets. " );
+			l.debug("Je viens de finir l'ajout des timesheets.");
+			l.info("Out getAllTimesheets() without errors.");
+		} catch (Exception e) {
+			l.error("Erreur dans getAllTimesheets() : " + e);
 		}
 	}
 
