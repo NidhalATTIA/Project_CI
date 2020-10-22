@@ -538,3 +538,81 @@ Verify the connector's configuration, identify and stop any process that's liste
 2020-10-21 16:32:06.770  INFO 18108 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2020-10-21 16:32:06.772  INFO 18108 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2020-10-21 16:32:06.774  INFO 18108 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-10-21 17:07:59.605  INFO 9736 --- [main] SpringBootCoreDataJpaMvcRest1Application : Starting TimesheetSpringBootCoreDataJpaMvcRest1Application on LAPTOP-MS4JFIH5 with PID 9736 (C:\Users\attia\Workspace\Project_CI\target\classes started by attia in C:\Users\attia\Workspace\Project_CI)
+2020-10-21 17:07:59.607  INFO 9736 --- [main] SpringBootCoreDataJpaMvcRest1Application : No active profile set, falling back to default profiles: default
+2020-10-21 17:08:00.046  INFO 9736 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-10-21 17:08:00.100  INFO 9736 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49ms. Found 6 repository interfaces.
+2020-10-21 17:08:00.298  INFO 9736 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d0374c40] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-21 17:08:00.532  INFO 9736 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2020-10-21 17:08:00.549  INFO 9736 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-21 17:08:00.549  INFO 9736 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2020-10-21 17:08:00.627  INFO 9736 --- [main] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2020-10-21 17:08:00.627  INFO 9736 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 984 ms
+2020-10-21 17:08:00.733  INFO 9736 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-10-21 17:08:00.810  INFO 9736 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-10-21 17:08:00.850  INFO 9736 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-10-21 17:08:00.944  INFO 9736 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
+2020-10-21 17:08:00.945  INFO 9736 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-10-21 17:08:01.070  INFO 9736 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-10-21 17:08:01.178  INFO 9736 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-10-21 17:08:01.958  INFO 9736 --- [main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@773c2214'
+2020-10-21 17:08:01.960  INFO 9736 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-10-21 17:08:02.192  INFO 9736 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-10-21 17:08:02.476  INFO 9736 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-21 17:08:02.501  WARN 9736 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-21 17:08:02.613 ERROR 9736 --- [main] org.apache.catalina.util.LifecycleBase   : Failed to start component [Connector[HTTP/1.1-8081]]
+
+org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1008) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:226) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:259) [spring-boot-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:197) [spring-boot-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:311) [spring-boot-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:164) [spring-boot-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552) [spring-context-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142) [spring-boot-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775) [spring-boot-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) [spring-boot-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) [spring-boot-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) [spring-boot-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at tn.esprit.spring.TimesheetSpringBootCoreDataJpaMvcRest1Application.main(TimesheetSpringBootCoreDataJpaMvcRest1Application.java:10) [classes/:na]
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method) ~[na:1.8.0_261]
+	at sun.nio.ch.Net.bind(Unknown Source) ~[na:1.8.0_261]
+	at sun.nio.ch.Net.bind(Unknown Source) ~[na:1.8.0_261]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source) ~[na:1.8.0_261]
+	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source) ~[na:1.8.0_261]
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:236) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1103) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1189) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:568) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1005) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	... 14 common frames omitted
+
+2020-10-21 17:08:02.616  INFO 9736 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-10-21 17:08:02.620  INFO 9736 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-10-21 17:08:02.622 ERROR 9736 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8081 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8081, or configure this application to listen on another port.
+
+2020-10-21 17:08:02.624  INFO 9736 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-21 17:08:02.625  INFO 9736 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-10-21 17:08:02.626  INFO 9736 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-10-21 17:08:02.628  INFO 9736 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
