@@ -14,6 +14,7 @@ public class EmployeTest {
 	public void testAjoutContrat() {
 		assertNotNull(employe.ajouterContrat(contrat));
 	}
+	
 	@Test
 	public void testAjoutEmploye() {
 		assertNotNull(employe.ajouterEmploye(employe));
