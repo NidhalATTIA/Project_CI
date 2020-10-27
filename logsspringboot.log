@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2020-10-26 22:15:50.940  INFO 11384 --- [main] SpringBootCoreDataJpaMvcRest1Application : Starting TimesheetSpringBootCoreDataJpaMvcRest1Application on DESKTOP-KNF6K2M with PID 11384 (C:\Users\user\Desktop\CI\Project_CI\target\classes started by user in C:\Users\user\Desktop\CI\Project_CI)
 2020-10-26 22:15:50.955  INFO 11384 --- [main] SpringBootCoreDataJpaMvcRest1Application : No active profile set, falling back to default profiles: default
 2020-10-26 22:15:53.386  INFO 11384 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
@@ -14,6 +15,24 @@
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
 2020-10-26 22:15:55.802 ERROR 11384 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+=======
+2020-10-27 00:15:52.979  INFO 848 --- [main] SpringBootCoreDataJpaMvcRest1Application : Starting TimesheetSpringBootCoreDataJpaMvcRest1Application on DESKTOP-KNF6K2M with PID 848 (C:\Users\user\Desktop\CI\Project_CI\target\classes started by user in C:\Users\user\Desktop\CI\Project_CI)
+2020-10-27 00:15:52.989  INFO 848 --- [main] SpringBootCoreDataJpaMvcRest1Application : No active profile set, falling back to default profiles: default
+2020-10-27 00:15:54.247  INFO 848 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-10-27 00:15:54.403  INFO 848 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 142ms. Found 6 repository interfaces.
+2020-10-27 00:15:54.953  INFO 848 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2aec7ec7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-27 00:15:55.468  INFO 848 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2020-10-27 00:15:55.502  INFO 848 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-27 00:15:55.503  INFO 848 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2020-10-27 00:15:55.691  INFO 848 --- [main] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2020-10-27 00:15:55.692  INFO 848 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2573 ms
+2020-10-27 00:15:55.990  WARN 848 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'IControllerEmployeImpl': Unsatisfied dependency expressed through field 'iemployeservice'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'employeServiceImpl': Unsatisfied dependency expressed through field 'employeRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'employeRepository': Cannot create inner bean '(inner bean)#3af356f' of type [org.springframework.orm.jpa.SharedEntityManagerCreator] while setting bean property 'entityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#3af356f': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'entityManagerFactory' available
+2020-10-27 00:15:56.002  INFO 848 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-10-27 00:15:56.028  INFO 848 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-10-27 00:15:56.176 ERROR 848 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+>>>>>>> main
 
 ***************************
 APPLICATION FAILED TO START
@@ -31,6 +50,7 @@ Action:
 
 Consider defining a bean named 'entityManagerFactory' in your configuration.
 
+<<<<<<< HEAD
 2020-10-26 22:25:32.134  INFO 11956 --- [main] SpringBootCoreDataJpaMvcRest1Application : Starting TimesheetSpringBootCoreDataJpaMvcRest1Application on DESKTOP-KNF6K2M with PID 11956 (C:\Users\user\Desktop\CI\Project_CI\target\classes started by user in C:\Users\user\Desktop\CI\Project_CI)
 2020-10-26 22:25:32.138  INFO 11956 --- [main] SpringBootCoreDataJpaMvcRest1Application : No active profile set, falling back to default profiles: default
 2020-10-26 22:25:33.665  INFO 11956 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
@@ -47,6 +67,24 @@ Consider defining a bean named 'entityManagerFactory' in your configuration.
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
 2020-10-26 22:25:35.940 ERROR 11956 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+=======
+2020-10-27 00:28:45.304  INFO 1256 --- [main] SpringBootCoreDataJpaMvcRest1Application : Starting TimesheetSpringBootCoreDataJpaMvcRest1Application on DESKTOP-KNF6K2M with PID 1256 (C:\Users\user\Desktop\CI\Project_CI\target\classes started by user in C:\Users\user\Desktop\CI\Project_CI)
+2020-10-27 00:28:45.317  INFO 1256 --- [main] SpringBootCoreDataJpaMvcRest1Application : No active profile set, falling back to default profiles: default
+2020-10-27 00:28:46.973  INFO 1256 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-10-27 00:28:47.191  INFO 1256 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 200ms. Found 6 repository interfaces.
+2020-10-27 00:28:48.376  INFO 1256 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$eca9cbe] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-27 00:28:49.149  INFO 1256 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+2020-10-27 00:28:49.196  INFO 1256 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-27 00:28:49.197  INFO 1256 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2020-10-27 00:28:49.573  INFO 1256 --- [main] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2020-10-27 00:28:49.573  INFO 1256 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4024 ms
+2020-10-27 00:28:49.940  WARN 1256 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'IControllerEmployeImpl': Unsatisfied dependency expressed through field 'iemployeservice'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'employeServiceImpl': Unsatisfied dependency expressed through field 'employeRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'employeRepository': Cannot create inner bean '(inner bean)#2503ec73' of type [org.springframework.orm.jpa.SharedEntityManagerCreator] while setting bean property 'entityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#2503ec73': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'entityManagerFactory' available
+2020-10-27 00:28:49.950  INFO 1256 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-10-27 00:28:49.991  INFO 1256 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-10-27 00:28:50.306 ERROR 1256 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+>>>>>>> main
 
 ***************************
 APPLICATION FAILED TO START
@@ -64,6 +102,7 @@ Action:
 
 Consider defining a bean named 'entityManagerFactory' in your configuration.
 
+<<<<<<< HEAD
 2020-10-26 22:27:26.369  INFO 9844 --- [main] SpringBootCoreDataJpaMvcRest1Application : Starting TimesheetSpringBootCoreDataJpaMvcRest1Application on DESKTOP-KNF6K2M with PID 9844 (C:\Users\user\Desktop\CI\Project_CI\target\classes started by user in C:\Users\user\Desktop\CI\Project_CI)
 2020-10-26 22:27:26.374  INFO 9844 --- [main] SpringBootCoreDataJpaMvcRest1Application : No active profile set, falling back to default profiles: default
 2020-10-26 22:27:27.929  INFO 9844 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
@@ -80,6 +119,24 @@ Consider defining a bean named 'entityManagerFactory' in your configuration.
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
 2020-10-26 22:27:30.208 ERROR 9844 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+=======
+2020-10-27 00:33:23.504  INFO 7868 --- [main] SpringBootCoreDataJpaMvcRest1Application : Starting TimesheetSpringBootCoreDataJpaMvcRest1Application on DESKTOP-KNF6K2M with PID 7868 (C:\Users\user\Desktop\CI\Project_CI\target\classes started by user in C:\Users\user\Desktop\CI\Project_CI)
+2020-10-27 00:33:23.516  INFO 7868 --- [main] SpringBootCoreDataJpaMvcRest1Application : No active profile set, falling back to default profiles: default
+2020-10-27 00:33:24.671  INFO 7868 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-10-27 00:33:24.838  INFO 7868 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 153ms. Found 6 repository interfaces.
+2020-10-27 00:33:25.377  INFO 7868 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$dc6f4580] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-27 00:33:25.990  INFO 7868 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+2020-10-27 00:33:26.021  INFO 7868 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-27 00:33:26.022  INFO 7868 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2020-10-27 00:33:26.204  INFO 7868 --- [main] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2020-10-27 00:33:26.209  INFO 7868 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2602 ms
+2020-10-27 00:33:26.548  WARN 7868 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'IControllerEmployeImpl': Unsatisfied dependency expressed through field 'iemployeservice'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'employeServiceImpl': Unsatisfied dependency expressed through field 'employeRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'employeRepository': Cannot create inner bean '(inner bean)#53692008' of type [org.springframework.orm.jpa.SharedEntityManagerCreator] while setting bean property 'entityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#53692008': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'entityManagerFactory' available
+2020-10-27 00:33:26.564  INFO 7868 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-10-27 00:33:26.593  INFO 7868 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-10-27 00:33:26.695 ERROR 7868 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+>>>>>>> main
 
 ***************************
 APPLICATION FAILED TO START
@@ -97,6 +154,7 @@ Action:
 
 Consider defining a bean named 'entityManagerFactory' in your configuration.
 
+<<<<<<< HEAD
 2020-10-26 22:29:45.164  INFO 6112 --- [main] SpringBootCoreDataJpaMvcRest1Application : Starting TimesheetSpringBootCoreDataJpaMvcRest1Application on DESKTOP-KNF6K2M with PID 6112 (C:\Users\user\Desktop\CI\Project_CI\target\classes started by user in C:\Users\user\Desktop\CI\Project_CI)
 2020-10-26 22:29:45.169  INFO 6112 --- [main] SpringBootCoreDataJpaMvcRest1Application : No active profile set, falling back to default profiles: default
 2020-10-26 22:29:46.616  INFO 6112 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
@@ -113,6 +171,24 @@ Consider defining a bean named 'entityManagerFactory' in your configuration.
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
 2020-10-26 22:29:48.815 ERROR 6112 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+=======
+2020-10-27 00:36:27.648  INFO 3448 --- [main] SpringBootCoreDataJpaMvcRest1Application : Starting TimesheetSpringBootCoreDataJpaMvcRest1Application on DESKTOP-KNF6K2M with PID 3448 (C:\Users\user\Desktop\CI\Project_CI\target\classes started by user in C:\Users\user\Desktop\CI\Project_CI)
+2020-10-27 00:36:27.664  INFO 3448 --- [main] SpringBootCoreDataJpaMvcRest1Application : No active profile set, falling back to default profiles: default
+2020-10-27 00:36:28.808  INFO 3448 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-10-27 00:36:28.952  INFO 3448 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 134ms. Found 6 repository interfaces.
+2020-10-27 00:36:29.802  INFO 3448 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f3dec6c5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-27 00:36:30.430  INFO 3448 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+2020-10-27 00:36:30.486  INFO 3448 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-27 00:36:30.487  INFO 3448 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2020-10-27 00:36:30.770  INFO 3448 --- [main] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2020-10-27 00:36:30.771  INFO 3448 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2992 ms
+2020-10-27 00:36:31.162  WARN 3448 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'IControllerEmployeImpl': Unsatisfied dependency expressed through field 'iemployeservice'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'employeServiceImpl': Unsatisfied dependency expressed through field 'employeRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'employeRepository': Cannot create inner bean '(inner bean)#5dc3fcb7' of type [org.springframework.orm.jpa.SharedEntityManagerCreator] while setting bean property 'entityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#5dc3fcb7': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'entityManagerFactory' available
+2020-10-27 00:36:31.167  INFO 3448 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-10-27 00:36:31.203  INFO 3448 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-10-27 00:36:31.350 ERROR 3448 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+>>>>>>> main
 
 ***************************
 APPLICATION FAILED TO START
@@ -130,6 +206,7 @@ Action:
 
 Consider defining a bean named 'entityManagerFactory' in your configuration.
 
+<<<<<<< HEAD
 2020-10-26 22:30:39.529  INFO 12888 --- [main] SpringBootCoreDataJpaMvcRest1Application : Starting TimesheetSpringBootCoreDataJpaMvcRest1Application on DESKTOP-KNF6K2M with PID 12888 (C:\Users\user\Desktop\CI\Project_CI\target\classes started by user in C:\Users\user\Desktop\CI\Project_CI)
 2020-10-26 22:30:39.534  INFO 12888 --- [main] SpringBootCoreDataJpaMvcRest1Application : No active profile set, falling back to default profiles: default
 2020-10-26 22:30:40.660  INFO 12888 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
@@ -146,6 +223,24 @@ Consider defining a bean named 'entityManagerFactory' in your configuration.
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
 2020-10-26 22:30:42.931 ERROR 12888 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+=======
+2020-10-27 00:38:20.595  INFO 8312 --- [main] SpringBootCoreDataJpaMvcRest1Application : Starting TimesheetSpringBootCoreDataJpaMvcRest1Application on DESKTOP-KNF6K2M with PID 8312 (C:\Users\user\Desktop\CI\Project_CI\target\classes started by user in C:\Users\user\Desktop\CI\Project_CI)
+2020-10-27 00:38:20.599  INFO 8312 --- [main] SpringBootCoreDataJpaMvcRest1Application : No active profile set, falling back to default profiles: default
+2020-10-27 00:38:22.051  INFO 8312 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-10-27 00:38:22.230  INFO 8312 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 166ms. Found 6 repository interfaces.
+2020-10-27 00:38:22.802  INFO 8312 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7e843c7e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-27 00:38:23.409  INFO 8312 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+2020-10-27 00:38:23.442  INFO 8312 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-27 00:38:23.442  INFO 8312 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2020-10-27 00:38:23.646  INFO 8312 --- [main] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2020-10-27 00:38:23.647  INFO 8312 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2907 ms
+2020-10-27 00:38:23.967  WARN 8312 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'IControllerEmployeImpl': Unsatisfied dependency expressed through field 'iemployeservice'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'employeServiceImpl': Unsatisfied dependency expressed through field 'employeRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'employeRepository': Cannot create inner bean '(inner bean)#4c0884e8' of type [org.springframework.orm.jpa.SharedEntityManagerCreator] while setting bean property 'entityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#4c0884e8': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'entityManagerFactory' available
+2020-10-27 00:38:23.981  INFO 8312 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-10-27 00:38:24.011  INFO 8312 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-10-27 00:38:24.162 ERROR 8312 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+>>>>>>> main
 
 ***************************
 APPLICATION FAILED TO START
@@ -163,6 +258,7 @@ Action:
 
 Consider defining a bean named 'entityManagerFactory' in your configuration.
 
+<<<<<<< HEAD
 2020-10-26 23:17:25.489  INFO 9384 --- [main] SpringBootCoreDataJpaMvcRest1Application : Starting TimesheetSpringBootCoreDataJpaMvcRest1Application on DESKTOP-KNF6K2M with PID 9384 (C:\Users\user\Desktop\CI\Project_CI\target\classes started by user in C:\Users\user\Desktop\CI\Project_CI)
 2020-10-26 23:17:25.518  INFO 9384 --- [main] SpringBootCoreDataJpaMvcRest1Application : No active profile set, falling back to default profiles: default
 2020-10-26 23:17:27.018  INFO 9384 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
@@ -179,6 +275,24 @@ Consider defining a bean named 'entityManagerFactory' in your configuration.
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
 2020-10-26 23:17:29.188 ERROR 9384 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+=======
+2020-10-27 00:39:36.405  INFO 11512 --- [main] SpringBootCoreDataJpaMvcRest1Application : Starting TimesheetSpringBootCoreDataJpaMvcRest1Application on DESKTOP-KNF6K2M with PID 11512 (C:\Users\user\Desktop\CI\Project_CI\target\classes started by user in C:\Users\user\Desktop\CI\Project_CI)
+2020-10-27 00:39:36.410  INFO 11512 --- [main] SpringBootCoreDataJpaMvcRest1Application : No active profile set, falling back to default profiles: default
+2020-10-27 00:39:37.820  INFO 11512 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-10-27 00:39:38.143  INFO 11512 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 267ms. Found 6 repository interfaces.
+2020-10-27 00:39:38.849  INFO 11512 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5d1e7b8c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-27 00:39:39.442  INFO 11512 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+2020-10-27 00:39:39.476  INFO 11512 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-27 00:39:39.477  INFO 11512 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2020-10-27 00:39:39.735  INFO 11512 --- [main] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2020-10-27 00:39:39.743  INFO 11512 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3252 ms
+2020-10-27 00:39:40.110  WARN 11512 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'IControllerEmployeImpl': Unsatisfied dependency expressed through field 'iemployeservice'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'employeServiceImpl': Unsatisfied dependency expressed through field 'employeRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'employeRepository': Cannot create inner bean '(inner bean)#340b7ef6' of type [org.springframework.orm.jpa.SharedEntityManagerCreator] while setting bean property 'entityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#340b7ef6': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'entityManagerFactory' available
+2020-10-27 00:39:40.124  INFO 11512 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-10-27 00:39:40.165  INFO 11512 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-10-27 00:39:40.373 ERROR 11512 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+>>>>>>> main
 
 ***************************
 APPLICATION FAILED TO START
@@ -196,6 +310,7 @@ Action:
 
 Consider defining a bean named 'entityManagerFactory' in your configuration.
 
+<<<<<<< HEAD
 2020-10-26 23:20:10.306  INFO 11372 --- [main] SpringBootCoreDataJpaMvcRest1Application : Starting TimesheetSpringBootCoreDataJpaMvcRest1Application on DESKTOP-KNF6K2M with PID 11372 (C:\Users\user\Desktop\CI\Project_CI\target\classes started by user in C:\Users\user\Desktop\CI\Project_CI)
 2020-10-26 23:20:10.338  INFO 11372 --- [main] SpringBootCoreDataJpaMvcRest1Application : No active profile set, falling back to default profiles: default
 2020-10-26 23:20:11.678  INFO 11372 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
@@ -212,6 +327,24 @@ Consider defining a bean named 'entityManagerFactory' in your configuration.
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
 2020-10-26 23:20:13.653 ERROR 11372 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+=======
+2020-10-27 00:47:46.895  INFO 8328 --- [main] SpringBootCoreDataJpaMvcRest1Application : Starting TimesheetSpringBootCoreDataJpaMvcRest1Application on DESKTOP-KNF6K2M with PID 8328 (C:\Users\user\Documents\workspace-sts-3.8.4.RELEASE\Project_CI\target\classes started by user in C:\Users\user\Documents\workspace-sts-3.8.4.RELEASE\Project_CI)
+2020-10-27 00:47:46.900  INFO 8328 --- [main] SpringBootCoreDataJpaMvcRest1Application : No active profile set, falling back to default profiles: default
+2020-10-27 00:47:48.136  INFO 8328 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-10-27 00:47:48.318  INFO 8328 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 168ms. Found 6 repository interfaces.
+2020-10-27 00:47:48.887  INFO 8328 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$57928285] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-27 00:47:49.702  INFO 8328 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+2020-10-27 00:47:49.737  INFO 8328 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-27 00:47:49.737  INFO 8328 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2020-10-27 00:47:49.928  INFO 8328 --- [main] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2020-10-27 00:47:49.928  INFO 8328 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2944 ms
+2020-10-27 00:47:50.236  WARN 8328 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'IControllerEmployeImpl': Unsatisfied dependency expressed through field 'iemployeservice'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'employeServiceImpl': Unsatisfied dependency expressed through field 'employeRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'employeRepository': Cannot create inner bean '(inner bean)#3005db4a' of type [org.springframework.orm.jpa.SharedEntityManagerCreator] while setting bean property 'entityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#3005db4a': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'entityManagerFactory' available
+2020-10-27 00:47:50.244  INFO 8328 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-10-27 00:47:50.274  INFO 8328 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-10-27 00:47:50.414 ERROR 8328 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+>>>>>>> main
 
 ***************************
 APPLICATION FAILED TO START
@@ -229,6 +362,7 @@ Action:
 
 Consider defining a bean named 'entityManagerFactory' in your configuration.
 
+<<<<<<< HEAD
 2020-10-26 23:20:48.062  INFO 7444 --- [main] SpringBootCoreDataJpaMvcRest1Application : Starting TimesheetSpringBootCoreDataJpaMvcRest1Application on DESKTOP-KNF6K2M with PID 7444 (C:\Users\user\Desktop\CI\Project_CI\target\classes started by user in C:\Users\user\Desktop\CI\Project_CI)
 2020-10-26 23:20:48.067  INFO 7444 --- [main] SpringBootCoreDataJpaMvcRest1Application : No active profile set, falling back to default profiles: default
 2020-10-26 23:20:49.303  INFO 7444 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
@@ -245,6 +379,24 @@ Consider defining a bean named 'entityManagerFactory' in your configuration.
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
 2020-10-26 23:20:51.204 ERROR 7444 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+=======
+2020-10-27 00:48:43.585  INFO 7688 --- [main] SpringBootCoreDataJpaMvcRest1Application : Starting TimesheetSpringBootCoreDataJpaMvcRest1Application on DESKTOP-KNF6K2M with PID 7688 (C:\Users\user\Documents\workspace-sts-3.8.4.RELEASE\Project_CI\target\classes started by user in C:\Users\user\Documents\workspace-sts-3.8.4.RELEASE\Project_CI)
+2020-10-27 00:48:43.593  INFO 7688 --- [main] SpringBootCoreDataJpaMvcRest1Application : No active profile set, falling back to default profiles: default
+2020-10-27 00:48:44.842  INFO 7688 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-10-27 00:48:45.012  INFO 7688 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 158ms. Found 6 repository interfaces.
+2020-10-27 00:48:45.606  INFO 7688 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5ec1ecb1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-27 00:48:46.207  INFO 7688 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+2020-10-27 00:48:46.252  INFO 7688 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-27 00:48:46.253  INFO 7688 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2020-10-27 00:48:46.476  INFO 7688 --- [main] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2020-10-27 00:48:46.477  INFO 7688 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2745 ms
+2020-10-27 00:48:46.826  WARN 7688 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'IControllerEmployeImpl': Unsatisfied dependency expressed through field 'iemployeservice'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'employeServiceImpl': Unsatisfied dependency expressed through field 'employeRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'employeRepository': Cannot create inner bean '(inner bean)#79a1728c' of type [org.springframework.orm.jpa.SharedEntityManagerCreator] while setting bean property 'entityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#79a1728c': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'entityManagerFactory' available
+2020-10-27 00:48:46.831  INFO 7688 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-10-27 00:48:46.864  INFO 7688 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-10-27 00:48:46.982 ERROR 7688 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+>>>>>>> main
 
 ***************************
 APPLICATION FAILED TO START
@@ -262,6 +414,7 @@ Action:
 
 Consider defining a bean named 'entityManagerFactory' in your configuration.
 
+<<<<<<< HEAD
 2020-10-26 23:24:32.186  INFO 1764 --- [main] SpringBootCoreDataJpaMvcRest1Application : Starting TimesheetSpringBootCoreDataJpaMvcRest1Application on DESKTOP-KNF6K2M with PID 1764 (C:\Users\user\Desktop\CI\Project_CI\target\classes started by user in C:\Users\user\Desktop\CI\Project_CI)
 2020-10-26 23:24:32.191  INFO 1764 --- [main] SpringBootCoreDataJpaMvcRest1Application : No active profile set, falling back to default profiles: default
 2020-10-26 23:24:33.434  INFO 1764 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
@@ -278,6 +431,24 @@ Consider defining a bean named 'entityManagerFactory' in your configuration.
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
 2020-10-26 23:24:35.971 ERROR 1764 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+=======
+2020-10-27 00:49:28.857  INFO 12548 --- [main] SpringBootCoreDataJpaMvcRest1Application : Starting TimesheetSpringBootCoreDataJpaMvcRest1Application on DESKTOP-KNF6K2M with PID 12548 (C:\Users\user\Documents\workspace-sts-3.8.4.RELEASE\Project_CI\target\classes started by user in C:\Users\user\Documents\workspace-sts-3.8.4.RELEASE\Project_CI)
+2020-10-27 00:49:28.861  INFO 12548 --- [main] SpringBootCoreDataJpaMvcRest1Application : No active profile set, falling back to default profiles: default
+2020-10-27 00:49:30.144  INFO 12548 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-10-27 00:49:30.286  INFO 12548 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 132ms. Found 6 repository interfaces.
+2020-10-27 00:49:30.817  INFO 12548 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$585199ed] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-27 00:49:31.342  INFO 12548 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+2020-10-27 00:49:31.376  INFO 12548 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-27 00:49:31.376  INFO 12548 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2020-10-27 00:49:31.619  INFO 12548 --- [main] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2020-10-27 00:49:31.620  INFO 12548 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2685 ms
+2020-10-27 00:49:31.943  WARN 12548 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'IControllerEmployeImpl': Unsatisfied dependency expressed through field 'iemployeservice'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'employeServiceImpl': Unsatisfied dependency expressed through field 'employeRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'employeRepository': Cannot create inner bean '(inner bean)#4a29f290' of type [org.springframework.orm.jpa.SharedEntityManagerCreator] while setting bean property 'entityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#4a29f290': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'entityManagerFactory' available
+2020-10-27 00:49:31.958  INFO 12548 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-10-27 00:49:31.985  INFO 12548 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-10-27 00:49:32.133 ERROR 12548 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+>>>>>>> main
 
 ***************************
 APPLICATION FAILED TO START
@@ -295,6 +466,7 @@ Action:
 
 Consider defining a bean named 'entityManagerFactory' in your configuration.
 
+<<<<<<< HEAD
 2020-10-26 23:25:13.661  INFO 8020 --- [main] SpringBootCoreDataJpaMvcRest1Application : Starting TimesheetSpringBootCoreDataJpaMvcRest1Application on DESKTOP-KNF6K2M with PID 8020 (C:\Users\user\Desktop\CI\Project_CI\target\classes started by user in C:\Users\user\Desktop\CI\Project_CI)
 2020-10-26 23:25:13.666  INFO 8020 --- [main] SpringBootCoreDataJpaMvcRest1Application : No active profile set, falling back to default profiles: default
 2020-10-26 23:25:14.967  INFO 8020 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
@@ -311,6 +483,57 @@ Consider defining a bean named 'entityManagerFactory' in your configuration.
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
 2020-10-26 23:25:17.144 ERROR 8020 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+=======
+2020-10-27 00:51:46.557  INFO 9812 --- [main] SpringBootCoreDataJpaMvcRest1Application : Starting TimesheetSpringBootCoreDataJpaMvcRest1Application on DESKTOP-KNF6K2M with PID 9812 (C:\Users\user\Documents\workspace-sts-3.8.4.RELEASE\Project_CI\target\classes started by user in C:\Users\user\Documents\workspace-sts-3.8.4.RELEASE\Project_CI)
+2020-10-27 00:51:46.563  INFO 9812 --- [main] SpringBootCoreDataJpaMvcRest1Application : No active profile set, falling back to default profiles: default
+2020-10-27 00:51:47.719  INFO 9812 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-10-27 00:51:47.870  INFO 9812 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 138ms. Found 6 repository interfaces.
+2020-10-27 00:51:48.433  INFO 9812 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3c6448a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-27 00:51:49.036  INFO 9812 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+2020-10-27 00:51:49.083  INFO 9812 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-27 00:51:49.084  INFO 9812 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2020-10-27 00:51:49.304  INFO 9812 --- [main] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2020-10-27 00:51:49.305  INFO 9812 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2654 ms
+2020-10-27 00:51:49.693  WARN 9812 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'IControllerEmployeImpl': Unsatisfied dependency expressed through field 'iemployeservice'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'employeServiceImpl': Unsatisfied dependency expressed through field 'employeRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'employeRepository': Cannot create inner bean '(inner bean)#4cd1c1dc' of type [org.springframework.orm.jpa.SharedEntityManagerCreator] while setting bean property 'entityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#4cd1c1dc': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'entityManagerFactory' available
+2020-10-27 00:51:49.703  INFO 9812 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-10-27 00:51:49.738  INFO 9812 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-10-27 00:51:49.867 ERROR 9812 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field employeRepository in tn.esprit.spring.services.EmployeServiceImpl required a bean named 'entityManagerFactory' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean named 'entityManagerFactory' in your configuration.
+
+2020-10-27 00:52:28.861  INFO 2616 --- [main] SpringBootCoreDataJpaMvcRest1Application : Starting TimesheetSpringBootCoreDataJpaMvcRest1Application on DESKTOP-KNF6K2M with PID 2616 (C:\Users\user\Documents\workspace-sts-3.8.4.RELEASE\Project_CI\target\classes started by user in C:\Users\user\Documents\workspace-sts-3.8.4.RELEASE\Project_CI)
+2020-10-27 00:52:28.866  INFO 2616 --- [main] SpringBootCoreDataJpaMvcRest1Application : No active profile set, falling back to default profiles: default
+2020-10-27 00:52:30.071  INFO 2616 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-10-27 00:52:30.220  INFO 2616 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 134ms. Found 6 repository interfaces.
+2020-10-27 00:52:30.967  INFO 2616 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a460e9a9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-27 00:52:31.817  INFO 2616 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+2020-10-27 00:52:31.870  INFO 2616 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-27 00:52:31.873  INFO 2616 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2020-10-27 00:52:32.086  INFO 2616 --- [main] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2020-10-27 00:52:32.087  INFO 2616 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3153 ms
+2020-10-27 00:52:32.349  WARN 2616 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'IControllerEmployeImpl': Unsatisfied dependency expressed through field 'iemployeservice'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'employeServiceImpl': Unsatisfied dependency expressed through field 'employeRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'employeRepository': Cannot create inner bean '(inner bean)#29314cc9' of type [org.springframework.orm.jpa.SharedEntityManagerCreator] while setting bean property 'entityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#29314cc9': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'entityManagerFactory' available
+2020-10-27 00:52:32.358  INFO 2616 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-10-27 00:52:32.388  INFO 2616 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-10-27 00:52:32.544 ERROR 2616 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+>>>>>>> main
 
 ***************************
 APPLICATION FAILED TO START
