@@ -21,7 +21,6 @@ public class EmployeTest {
 	Date dateDebut;
 	Date dateFin;
 	int employeId,depId;
-
 	@Test
 	public void testAjoutContrat() {
 		assertNotNull(employeService.ajouterContrat(contrat));
@@ -38,6 +37,12 @@ public class EmployeTest {
 	/*@Test
 	public void testaffecterEmployeADepartement() {
 		assertNotNull(employeService.affecterEmployeADepartement(employeId,depId));
+<<<<<<< HEAD
 	}
 	*/
 }
+=======
+	}*/
+	
+}
+>>>>>>> cb2c19068150f10afda4eb3be61ec7ad249e931c

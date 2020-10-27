@@ -11,10 +11,9 @@ public class EntrepriseTest {
 
 	EntrepriseServiceImpl entrepriseService = new EntrepriseServiceImpl();
 	Entreprise entreprise = new Entreprise();
-
 	@Test
 	public void testAjoutEntreprise() {
 		assertNotNull(entrepriseService.ajouterEntreprise(entreprise));
 	}
 
-}
+}	
