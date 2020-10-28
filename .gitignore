@@ -29,3 +29,5 @@ build/
 
 ### VS Code ###
 .vscode/
+/logsspringboot.log.2020-10-22.0.gz
+/logsspringboot.log
