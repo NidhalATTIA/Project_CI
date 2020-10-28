@@ -14,14 +14,13 @@ import tn.esprit.spring.services.EmployeServiceImpl;
 public class EmployeTest {
 	
 	
-	EmployeServiceImpl employeService=new EmployeServiceImpl();
+	/*EmployeServiceImpl employeService=new EmployeServiceImpl();
 	Employe employe = new Employe();
 	Contrat contrat = new Contrat();
 	Mission mission = new Mission();
 	Date dateDebut;
 	Date dateFin;
 	int employeId,depId;
-
 	@Test
 	public void testAjoutContrat() {
 		assertNotNull(employeService.ajouterContrat(contrat));
@@ -33,11 +32,15 @@ public class EmployeTest {
 	@Test
 	public void testAjoutTimesheet() {
 		assertNotNull(employeService.getTimesheetsByMissionAndDate(employe,mission,dateDebut,dateFin));
-	}
+	}*/
 
 	/*@Test
 	public void testaffecterEmployeADepartement() {
 		assertNotNull(employeService.affecterEmployeADepartement(employeId,depId));
+
 	}
 	*/
+
+	
 }
+
