@@ -1,6 +1,6 @@
 package tn.junit.test;
 
-import org.junit.Test;
+/*import org.junit.Test;
 import static org.junit.Assert.assertNotNull;
 
 import java.util.Date;
@@ -8,7 +8,7 @@ import java.util.Date;
 import tn.esprit.spring.entities.Contrat;
 import tn.esprit.spring.entities.Employe;
 import tn.esprit.spring.entities.Mission;
-import tn.esprit.spring.services.EmployeServiceImpl;
+import tn.esprit.spring.services.EmployeServiceImpl;*/
 
 
 public class EmployeTest {
