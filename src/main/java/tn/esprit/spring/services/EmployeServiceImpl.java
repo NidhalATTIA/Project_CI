@@ -16,7 +16,6 @@ import tn.esprit.spring.entities.Employe;
 import tn.esprit.spring.entities.Entreprise;
 import tn.esprit.spring.entities.Mission;
 import tn.esprit.spring.entities.Timesheet;
-import tn.esprit.spring.log4j.log4j;
 import tn.esprit.spring.repository.ContratRepository;
 import tn.esprit.spring.repository.DepartementRepository;
 import tn.esprit.spring.repository.EmployeRepository;
@@ -24,7 +23,7 @@ import tn.esprit.spring.repository.TimesheetRepository;
 
 @Service
 public class EmployeServiceImpl implements IEmployeService {
-	private static final Logger l = Logger.getLogger(log4j.class);
+	private static final Logger l = Logger.getLogger(EmployeServiceImpl.class);
 	@Autowired
 	EmployeRepository employeRepository;
 	@Autowired
@@ -57,11 +56,10 @@ public class EmployeServiceImpl implements IEmployeService {
 
 	@Transactional	
 	public void affecterEmployeADepartement(int employeId, int depId) {
-		Optional<Departement> Departementop= this.deptRepoistory.findById(depId);
-		if (Departementop.isPresent() ){
+	
 		Departement depManagedEntity = deptRepoistory.findById(depId).get();
 		Employe employeManagedEntity = employeRepository.findById(employeId).get();
-
+		
 		if(depManagedEntity.getEmployes() == null){
 
 			List<Employe> employes = new ArrayList<>();
@@ -71,7 +69,7 @@ public class EmployeServiceImpl implements IEmployeService {
 
 			depManagedEntity.getEmployes().add(employeManagedEntity);
 
-		}}
+		}
 
 	}
 	@Transactional
