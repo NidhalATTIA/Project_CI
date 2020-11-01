@@ -3,6 +3,7 @@ package tn.esprit.spring.services;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -10,11 +11,14 @@ import org.springframework.transaction.annotation.Transactional;
 import tn.esprit.spring.entities.Departement;
 import tn.esprit.spring.entities.Employe;
 import tn.esprit.spring.entities.Entreprise;
+import tn.esprit.spring.log4j.log4j;
 import tn.esprit.spring.repository.DepartementRepository;
 import tn.esprit.spring.repository.EntrepriseRepository;
 
 @Service
 public class EntrepriseServiceImpl implements IEntrepriseService {
+
+	private static final Logger l = Logger.getLogger(log4j.class);
 
 	@Autowired
     EntrepriseRepository entrepriseRepoistory;
@@ -22,12 +26,17 @@ public class EntrepriseServiceImpl implements IEntrepriseService {
 	DepartementRepository deptRepoistory;
 	
 	public int ajouterEntreprise(Entreprise entreprise) {
+		l.debug("Je viens de lancer l'ajout des entreprises! " );
 		entrepriseRepoistory.save(entreprise);
+		l.info("Ajouté !");
 		return entreprise.getId();
+		
 	}
 
 	public int ajouterDepartement(Departement dep) {
+		l.debug("Je viens de lancer l'ajout des departements! " );
 		deptRepoistory.save(dep);
+		l.info("Ajouté !");
 		return dep.getId();
 	}
 	
@@ -42,6 +51,7 @@ public class EntrepriseServiceImpl implements IEntrepriseService {
 				
 				depManagedEntity.setEntreprise(entrepriseManagedEntity);
 				deptRepoistory.save(depManagedEntity);
+
 		
 	}
 	
@@ -58,11 +68,15 @@ public class EntrepriseServiceImpl implements IEntrepriseService {
 	@Transactional
 	public void deleteEntrepriseById(int entrepriseId) {
 		entrepriseRepoistory.delete(entrepriseRepoistory.findById(entrepriseId).get());	
+		l.info("entreprise supprimée!");
+
 	}
 
 	@Transactional
 	public void deleteDepartementById(int depId) {
-		deptRepoistory.delete(deptRepoistory.findById(depId).get());	
+		deptRepoistory.delete(deptRepoistory.findById(depId).get());
+		l.info("departement supprimé!");
+
 	}
 
 
