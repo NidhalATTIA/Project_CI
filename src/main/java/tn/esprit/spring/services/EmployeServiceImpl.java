@@ -45,7 +45,7 @@ public class EmployeServiceImpl implements IEmployeService {
 	}
 
 	public void mettreAjourEmailByEmployeId(String email, int employeId) {
-		l.debug("Je viens de lancer mettreAjourEmailByEmployeId. " );
+		//l.debug("Je viens de lancer mettreAjourEmailByEmployeId. " );
 		Optional<Employe> employeop= this.employeRepository.findById(employeId);
 		if (employeop.isPresent() ){	
 		Employe employe = employeop.get();
@@ -57,6 +57,8 @@ public class EmployeServiceImpl implements IEmployeService {
 
 	@Transactional	
 	public void affecterEmployeADepartement(int employeId, int depId) {
+		Optional<Departement> Departementop= this.deptRepoistory.findById(depId);
+		if (Departementop.isPresent() ){
 		Departement depManagedEntity = deptRepoistory.findById(depId).get();
 		Employe employeManagedEntity = employeRepository.findById(employeId).get();
 
@@ -69,12 +71,13 @@ public class EmployeServiceImpl implements IEmployeService {
 
 			depManagedEntity.getEmployes().add(employeManagedEntity);
 
-		}
+		}}
 
 	}
 	@Transactional
 	public void desaffecterEmployeDuDepartement(int employeId, int depId)
 	{
+	
 		Departement dep = deptRepoistory.findById(depId).get();
 
 		int employeNb = dep.getEmployes().size();
@@ -103,6 +106,7 @@ public class EmployeServiceImpl implements IEmployeService {
 	public String getEmployePrenomById(int employeId) {
 		l.debug("Je viens de lancer getEmployePrenomById. " );
 		Optional<Employe> employeop= this.employeRepository.findById(employeId);
+		//if (employeop.isPresent() ){
 		Employe employeManagedEntity = employeop.get();
 		l.info("getEmployePrenomById done!!!! ");
 		return employeManagedEntity.getPrenom();
@@ -129,9 +133,11 @@ public class EmployeServiceImpl implements IEmployeService {
 	}}
 
 	public void deleteContratById(int contratId) {
+		Optional<Contrat> Contratop= this.contratRepoistory.findById(contratId);
+		if (Contratop.isPresent() ){
 		Contrat contratManagedEntity = contratRepoistory.findById(contratId).get();
 		contratRepoistory.delete(contratManagedEntity);
-
+		}
 	}
 
 	public int getNombreEmployeJPQL() {
