@@ -173,9 +173,6 @@ public class RestControlEmploye {
 		l.info("les departement sont ajoutés :" + departementId);
 		return iemployeservice.getSalaireMoyenByDepartementId(departementId);
 	}
-
-	///// sarra
-	// TODO
 	public List<Timesheet> getTimesheetsByMissionAndDate(Employe employe, Mission mission, Date dateDebut,
 			Date dateFin) {
 
