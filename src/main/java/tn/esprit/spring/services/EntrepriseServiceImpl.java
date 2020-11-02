@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import tn.esprit.spring.entities.Departement;
-import tn.esprit.spring.entities.Employe;
 import tn.esprit.spring.entities.Entreprise;
 import tn.esprit.spring.repository.DepartementRepository;
 import tn.esprit.spring.repository.EntrepriseRepository;
@@ -65,9 +64,9 @@ public class EntrepriseServiceImpl implements IEntrepriseService {
 
 	@Transactional
 	public void deleteDepartementById(int depId) {
-		Optional<Departement> Departementop= this.deptRepoistory.findById(depId);
-		if( Departementop.isPresent()){
-		deptRepoistory.delete(Departementop.get());	
+		Optional<Departement> Departementoptional= this.deptRepoistory.findById(depId);
+		if( Departementoptional.isPresent()){
+		deptRepoistory.delete(Departementoptional.get());	
 	}
 	}
 
