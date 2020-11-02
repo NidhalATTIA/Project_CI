@@ -72,16 +72,14 @@ public class EmployeServiceImpl implements IEmployeService {
 
 			depManagedEntity.getEmployes().add(employeManagedEntity);
 
-<<<<<<< HEAD
+
 		}
 
-		
 
-=======
 		}}
 		
->>>>>>> RayaBranche
-	}
+
+	
 	@Transactional
 	public void desaffecterEmployeDuDepartement(int employeId, int depId)
 	{
