@@ -52,6 +52,7 @@ public class EntrepriseServiceImpl implements IEntrepriseService {
 		
 		return depNames;
 	}
+	
 
 	@Transactional
 	public void deleteEntrepriseById(int entrepriseId) {
