@@ -44,8 +44,7 @@ public class EntrepriseServiceImpl implements IEntrepriseService {
 	}}
 	
 	public List<String> getAllDepartementsNamesByEntreprise(int entrepriseId) {
-		Optional<Entreprise> value = this.entrepriseRepoistory.findById(entrepriseId);
-		Entreprise entrepriseManagedEntity =value.get();
+		Entreprise entrepriseManagedEntity =entrepriseRepoistory.findById(entrepriseId).get();
 		List<String> depNames = new ArrayList<>();
 		for(Departement dep : entrepriseManagedEntity.getDepartements()){
 			depNames.add(dep.getName());
@@ -72,7 +71,8 @@ public class EntrepriseServiceImpl implements IEntrepriseService {
 	}
 
 	public Entreprise getEntrepriseById(int entrepriseId) {
-		return entrepriseRepoistory.findById(entrepriseId).get();	
+		Optional<Entreprise> Entrepriseop= this.entrepriseRepoistory.findById(entrepriseId);
+		return Entrepriseop.get();	
+	
 	}
-
 }

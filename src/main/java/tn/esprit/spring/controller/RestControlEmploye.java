@@ -11,8 +11,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -37,13 +35,9 @@ public class RestControlEmploye {
 	@Autowired
 	ITimesheetService itimesheetservice;
 
-	// http://localhost:8081/SpringMVC/servlet/ajouterEmployer
-	// {"id":1,"nom":"kallel", "prenom":"khaled",
-	// "email":"Khaled.kallel@ssiiconsulting.tn", "isActif":true,
-	// "role":"INGENIEUR"}
+	
 
-	//@PostMapping("/ajouterEmployer")
-	@RequestMapping(path = "/ajouterEmployer", method = RequestMethod.POST)
+	@PostMapping("/ajouterEmployer")
 	@ResponseBody
 	public Employe ajouterEmploye(@RequestBody Employe employe) {
 		iemployeservice.ajouterEmploye(employe);
