@@ -3,6 +3,7 @@ package tn.esprit.spring.services;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,11 +43,14 @@ public class EmployeServiceImpl implements IEmployeService {
 	}
 
 	public void mettreAjourEmailByEmployeId(String email, int employeId) {
-		Employe employe = employeRepository.findById(employeId).get();
+		//l.debug("Je viens de lancer mettreAjourEmailByEmployeId. " );
+		Optional<Employe> employeop= this.employeRepository.findById(employeId);
+		if (employeop.isPresent() ){	
+		Employe employe = employeop.get();
 		employe.setEmail(email);
 		l.info("mettreAjourEmailByEmployeId done!!!! ");
 		employeRepository.save(employe);
-
+		}
 	}
 
 	@Transactional	
