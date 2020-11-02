@@ -44,16 +44,10 @@ public class EmployeServiceImpl implements IEmployeService {
 	}
 
 	public void mettreAjourEmailByEmployeId(String email, int employeId) {
-<<<<<<< HEAD
 		//l.debug("Je viens de lancer mettreAjourEmailByEmployeId. " );
 		Optional<Employe> employeop= this.employeRepository.findById(employeId);
 		if (employeop.isPresent() ){	
 		Employe employe = employeop.get();
-=======
-		Optional<Employe> employeop= this.employeRepository.findById(employeId);
-		if (employeop.isPresent() ){	
-			Employe employe = employeop.get();
->>>>>>> dc7b50c08d06258def7f1d5406f501b5d7b98aa8
 		employe.setEmail(email);
 		l.info("mettreAjourEmailByEmployeId done!!!! ");
 		employeRepository.save(employe);
@@ -135,7 +129,7 @@ public class EmployeServiceImpl implements IEmployeService {
 		Optional<Employe> employeop= this.employeRepository.findById(employeId);
 		
 		if (employeop.isPresent() ){	
-			Employe employe = employeop.get();
+		Employe employe = employeop.get();
 
 		//Desaffecter l'employe de tous les departements
 		//c'est le bout master qui permet de mettre a jour
