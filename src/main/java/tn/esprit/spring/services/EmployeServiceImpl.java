@@ -42,8 +42,8 @@ public class EmployeServiceImpl implements IEmployeService {
 		return employe.getId();
 	}
 
-	public void mettreAjourEmailByEmployeId(String email, int employeId,Employe empl) {
-		Employe employe = employeRepository.findById(employeId).orElse(empl);
+	public void mettreAjourEmailByEmployeId(String email, int employeId) {
+		Employe employe = employeRepository.findById(employeId).get();
 		employe.setEmail(email);
 		l.info("mettreAjourEmailByEmployeId done!!!! ");
 		employeRepository.save(employe);
