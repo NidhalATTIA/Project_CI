@@ -32,12 +32,12 @@ public class EntrepriseServiceImpl implements IEntrepriseService {
 	}
 	
 	public void affecterDepartementAEntreprise(int depId, int entrepriseId) {
-		Optional<Entreprise> Entrepriseop= this.entrepriseRepoistory.findById(entrepriseId);
+		
 		Optional<Departement> Departementop= this.deptRepoistory.findById(depId);
-		if (Entrepriseop.isPresent() && Departementop.isPresent()){
+		Optional<Entreprise> Entrepriseop= this.entrepriseRepoistory.findById(entrepriseId);
+		if (Departementop.isPresent()  && Entrepriseop.isPresent()){
 				Entreprise entrepriseManagedEntity = Entrepriseop.get();
 				Departement depManagedEntity = Departementop.get();
-				
 				depManagedEntity.setEntreprise(entrepriseManagedEntity);
 				deptRepoistory.save(depManagedEntity);
 		
