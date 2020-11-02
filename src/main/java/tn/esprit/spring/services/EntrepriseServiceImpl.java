@@ -34,8 +34,9 @@ public class EntrepriseServiceImpl implements IEntrepriseService {
 	public void affecterDepartementAEntreprise(int depId, int entrepriseId) {
 		
 		Optional<Departement> Departementop= this.deptRepoistory.findById(depId);
-		if (Departementop.isPresent()){
-				Entreprise entrepriseManagedEntity = this.entrepriseRepoistory.findById(entrepriseId).get();
+		Optional<Entreprise> Entrepriseop= this.entrepriseRepoistory.findById(entrepriseId);
+		if (Departementop.isPresent()  && Entrepriseop.isPresent()){
+				Entreprise entrepriseManagedEntity = Entrepriseop.get();
 				Departement depManagedEntity = Departementop.get();
 				depManagedEntity.setEntreprise(entrepriseManagedEntity);
 				deptRepoistory.save(depManagedEntity);
@@ -43,13 +44,12 @@ public class EntrepriseServiceImpl implements IEntrepriseService {
 	}}
 	
 	public List<String> getAllDepartementsNamesByEntreprise(int entrepriseId) {
-		Optional<Entreprise> Entrepriseop= this.entrepriseRepoistory.findById(entrepriseId);
-		Entreprise entrepriseManagedEntity =Entrepriseop.get();
+		Entreprise entrepriseManagedEntity =this.entrepriseRepoistory.findById(entrepriseId).get();
 		List<String> depNames = new ArrayList<>();
 		for(Departement dep : entrepriseManagedEntity.getDepartements()){
 			depNames.add(dep.getName());
 		}
-	
+		
 		return depNames;
 	}
 
