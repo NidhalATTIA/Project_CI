@@ -7,11 +7,12 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
-import tn.esprit.spring.entities.Employe;
+
+import tn.esprit.spring.entities.EmployeDTO;
 import tn.esprit.spring.entities.Entreprise;
 
 
-public interface EmployeRepository extends CrudRepository<Employe, Integer>  {
+public interface EmployeRepository extends CrudRepository<EmployeDTO, Integer>  {
 	
 	
 	@Query("SELECT count(*) FROM Employe")
@@ -25,7 +26,7 @@ public interface EmployeRepository extends CrudRepository<Employe, Integer>  {
 			+ "join emp.departements dps "
 			+ "join dps.entreprise entrep "
 			+ "where entrep=:entreprise")
-    public List<Employe> getAllEmployeByEntreprisec(@Param("entreprise") Entreprise entreprise);
+    public List<EmployeDTO> getAllEmployeByEntreprisec(@Param("entreprise") Entreprise entreprise);
     
     @Modifying
     @Transactional

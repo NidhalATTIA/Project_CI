@@ -16,7 +16,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
 @Entity
-public class Employe implements Serializable {
+public class EmployeDTO implements Serializable {
 	
 	private static final long serialVersionUID = -1396669830860400871L;
 
@@ -54,11 +54,11 @@ public class Employe implements Serializable {
 	private List<Timesheet> timesheets;
 	
 	
-	public Employe() {
+	public EmployeDTO() {
 		super();
 	}
 	
-	public Employe(String nom, String prenom, String email, boolean isActif, Role role) {
+	public EmployeDTO(String nom, String prenom, String email, boolean isActif, Role role) {
 		this.nom = nom;
 		this.prenom = prenom;
 		this.email = email;

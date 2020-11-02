@@ -1,14 +1,16 @@
 package tn.esprit.spring.services;
 
 import java.text.SimpleDateFormat;
+
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import tn.esprit.spring.entities.Departement;
-import tn.esprit.spring.entities.Employe;
+import tn.esprit.spring.entities.EmployeDTO;
 import tn.esprit.spring.entities.Mission;
 import tn.esprit.spring.entities.Role;
 import tn.esprit.spring.entities.Timesheet;
@@ -63,7 +65,7 @@ public class TimesheetServiceImpl implements ITimesheetService {
 	
 	public void validerTimesheet(int missionId, int employeId, Date dateDebut, Date dateFin, int validateurId) {
 		System.out.println("In valider Timesheet");
-		Employe validateur = employeRepository.findById(validateurId).get();
+		EmployeDTO validateur = employeRepository.findById(validateurId).get();
 		Mission mission = missionRepository.findById(missionId).get();
 		//verifier s'il est un chef de departement (interet des enum)
 		if(!validateur.getRole().equals(Role.CHEF_DEPARTEMENT)){
@@ -99,7 +101,7 @@ public class TimesheetServiceImpl implements ITimesheetService {
 	}
 
 	
-	public List<Employe> getAllEmployeByMission(int missionId) {
+	public List<EmployeDTO> getAllEmployeByMission(int missionId) {
 		return timesheetRepository.getAllEmployeByMission(missionId);
 	}
 

@@ -24,7 +24,7 @@ public class Timesheet implements Serializable{
 	
 	@ManyToOne
     @JoinColumn(name = "idEmploye", referencedColumnName = "id", insertable=false, updatable=false)
-	private Employe employe;
+	private EmployeDTO employe;
 	
 	
 	private boolean isValide;
@@ -54,11 +54,11 @@ public class Timesheet implements Serializable{
 		this.mission = mission;
 	}
 
-	public Employe getEmploye() {
+	public EmployeDTO getEmploye() {
 		return employe;
 	}
 
-	public void setEmploye(Employe employe) {
+	public void setEmploye(EmployeDTO employe) {
 		this.employe = employe;
 	}
 
