@@ -1,6 +1,6 @@
 package tn.junit.test;
 
-import org.junit.Test;
+/*import org.junit.Test;
 import static org.junit.Assert.assertNotNull;
 
 import java.util.Date;
@@ -9,6 +9,10 @@ import tn.esprit.spring.entities.Contrat;
 import tn.esprit.spring.entities.Employe;
 import tn.esprit.spring.entities.Mission;
 import tn.esprit.spring.services.EmployeServiceImpl;
+<<<<<<< HEAD
+=======
+*/
+>>>>>>> main
 
 public class EmployeTest {
 
@@ -32,6 +36,7 @@ public class EmployeTest {
 
 	@Test
 	public void testAjoutTimesheet() {
+<<<<<<< HEAD
 		assertNotNull(employeService.getTimesheetsByMissionAndDate(employe, mission, dateDebut, dateFin));
 	}
 
@@ -41,3 +46,18 @@ public class EmployeTest {
 	// }*/
 
 }
+=======
+		assertNotNull(employeService.getTimesheetsByMissionAndDate(employe,mission,dateDebut,dateFin));
+	}*/
+
+	/*@Test
+	public void testaffecterEmployeADepartement() {
+		assertNotNull(employeService.affecterEmployeADepartement(employeId,depId));
+
+	}
+	*/
+
+	
+}
+
+>>>>>>> main
