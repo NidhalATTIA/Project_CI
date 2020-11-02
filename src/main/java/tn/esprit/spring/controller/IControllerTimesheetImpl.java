@@ -6,7 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import tn.esprit.spring.entities.EmployeDTO;
+import tn.esprit.spring.entities.Employe;
 import tn.esprit.spring.entities.Mission;
 import tn.esprit.spring.services.IEmployeService;
 import tn.esprit.spring.services.IEntrepriseService;
@@ -47,7 +47,7 @@ public class IControllerTimesheetImpl {
 	}
 
 
-	public List<EmployeDTO> getAllEmployeByMission(int missionId) {
+	public List<Employe> getAllEmployeByMission(int missionId) {
 
 		return itimesheetservice.getAllEmployeByMission(missionId);
 	}

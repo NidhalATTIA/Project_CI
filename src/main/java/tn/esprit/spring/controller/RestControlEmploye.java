@@ -1,7 +1,6 @@
 package tn.esprit.spring.controller;
 
 import java.util.Date;
-
 import java.util.List;
 
 import org.apache.log4j.Logger;
@@ -16,11 +15,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import tn.esprit.spring.entities.Contrat;
-import tn.esprit.spring.entities.EmployeDTO;
+import tn.esprit.spring.entities.Employe;
 import tn.esprit.spring.entities.Entreprise;
 import tn.esprit.spring.entities.Mission;
 import tn.esprit.spring.entities.Timesheet;
-import tn.esprit.spring.log4j.log4j;
 import tn.esprit.spring.services.IEmployeService;
 import tn.esprit.spring.services.IEntrepriseService;
 import tn.esprit.spring.services.ITimesheetService;
@@ -43,7 +41,7 @@ public class RestControlEmploye {
 
 	@PostMapping("/ajouterEmployer")
 	@ResponseBody
-	public EmployeDTO ajouterEmploye(@RequestBody EmployeDTO employe) {
+	public Employe ajouterEmploye(@RequestBody Employe employe) {
 		iemployeservice.ajouterEmploye(employe);
 		l.info("employe ajouté ");
 		return employe;
@@ -134,7 +132,7 @@ public class RestControlEmploye {
 	// URL : http://localhost:8081/SpringMVC/servlet/getAllEmployeByEntreprise/1
 	@GetMapping(value = "getAllEmployeByEntreprise/{identreprise}")
 	@ResponseBody
-	public List<EmployeDTO> getAllEmployeByEntreprise(@PathVariable("identreprise") int identreprise) {
+	public List<Employe> getAllEmployeByEntreprise(@PathVariable("identreprise") int identreprise) {
 		Entreprise entreprise = ientrepriseservice.getEntrepriseById(identreprise);
 		l.info("les employés par entreprise");
 		return iemployeservice.getAllEmployeByEntreprise(entreprise);
@@ -175,7 +173,7 @@ public class RestControlEmploye {
 		return iemployeservice.getSalaireMoyenByDepartementId(departementId);
 	}
 
-	public List<Timesheet> getTimesheetsByMissionAndDate(EmployeDTO employe, Mission mission, Date dateDebut,
+	public List<Timesheet> getTimesheetsByMissionAndDate(Employe employe, Mission mission, Date dateDebut,
 			Date dateFin) {
 
 		l.info("les mission sont affichées  ");
@@ -186,7 +184,7 @@ public class RestControlEmploye {
 	// URL : http://localhost:8081/SpringMVC/servlet/getAllEmployes
 	@GetMapping(value = "/getAllEmployes")
 	@ResponseBody
-	public List<EmployeDTO> getAllEmployes() {
+	public List<Employe> getAllEmployes() {
 
 		return iemployeservice.getAllEmployes();
 	}

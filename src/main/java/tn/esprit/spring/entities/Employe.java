@@ -1,7 +1,9 @@
 package tn.esprit.spring.entities;
 
 import java.io.Serializable;
+
 import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -12,11 +14,12 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
 @Entity
-public class EmployeDTO implements Serializable {
+public class Employe implements Serializable {
 	
 	private static final long serialVersionUID = -1396669830860400871L;
 
@@ -54,11 +57,11 @@ public class EmployeDTO implements Serializable {
 	private List<Timesheet> timesheets;
 	
 	
-	public EmployeDTO() {
+	public Employe() {
 		super();
 	}
 	
-	public EmployeDTO(String nom, String prenom, String email, boolean isActif, Role role) {
+	public Employe(String nom, String prenom, String email, boolean isActif, Role role) {
 		this.nom = nom;
 		this.prenom = prenom;
 		this.email = email;

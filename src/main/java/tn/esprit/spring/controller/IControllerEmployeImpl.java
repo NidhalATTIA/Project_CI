@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 import tn.esprit.spring.entities.Contrat;
-import tn.esprit.spring.entities.EmployeDTO;
+import tn.esprit.spring.entities.Employe;
 import tn.esprit.spring.entities.Entreprise;
 import tn.esprit.spring.entities.Mission;
 import tn.esprit.spring.entities.Timesheet;
@@ -25,7 +25,7 @@ public class IControllerEmployeImpl  {
 	@Autowired
 	ITimesheetService itimesheetservice;
 
-	public int ajouterEmploye(EmployeDTO employe)
+	public int ajouterEmploye(Employe employe)
 	{
 		iemployeservice.ajouterEmploye(employe);
 		return employe.getId();
@@ -86,7 +86,7 @@ public class IControllerEmployeImpl  {
 	}
 
 	
-	public List<EmployeDTO> getAllEmployeByEntreprise(Entreprise entreprise) {
+	public List<Employe> getAllEmployeByEntreprise(Entreprise entreprise) {
 		return iemployeservice.getAllEmployeByEntreprise(entreprise);
 	}
 
@@ -114,7 +114,7 @@ public class IControllerEmployeImpl  {
 
 	
 	
-	public List<Timesheet> getTimesheetsByMissionAndDate(EmployeDTO employe, Mission mission, Date dateDebut,
+	public List<Timesheet> getTimesheetsByMissionAndDate(Employe employe, Mission mission, Date dateDebut,
 			Date dateFin) {
 		return iemployeservice.getTimesheetsByMissionAndDate(employe, mission, dateDebut, dateFin);
 	}
@@ -122,7 +122,7 @@ public class IControllerEmployeImpl  {
 
 
 
-	public List<EmployeDTO> getAllEmployes() {
+	public List<Employe> getAllEmployes() {
 		
 		return iemployeservice.getAllEmployes();
 	}

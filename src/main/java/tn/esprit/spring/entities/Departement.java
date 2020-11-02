@@ -28,7 +28,7 @@ public class Departement implements Serializable {
 	//@JsonManagedReference 
 	@JsonIgnore
 	@ManyToMany
-	private List<EmployeDTO> employes;
+	private List<Employe> employes;
 	
 	@OneToMany(mappedBy="departement")
 	private List<Mission> missions;
@@ -60,11 +60,11 @@ public class Departement implements Serializable {
 		this.name = name;
 	}
 
-	public List<EmployeDTO> getEmployes() {
+	public List<Employe> getEmployes() {
 		return employes;
 	}
 
-	public void setEmployes(List<EmployeDTO> employes) {
+	public void setEmployes(List<Employe> employes) {
 		this.employes = employes;
 	}
 
