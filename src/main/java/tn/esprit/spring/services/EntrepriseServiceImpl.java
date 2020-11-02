@@ -33,26 +33,25 @@ public class EntrepriseServiceImpl implements IEntrepriseService {
 	}
 	
 	public void affecterDepartementAEntreprise(int depId, int entrepriseId) {
-		//Le bout Master de cette relation N:1 est departement  
-				//donc il faut rajouter l'entreprise a departement 
-				// ==> c'est l'objet departement(le master) qui va mettre a jour l'association
-				//Rappel : la classe qui contient mappedBy represente le bout Slave
-				//Rappel : Dans une relation oneToMany le mappedBy doit etre du cote one.
-				Entreprise entrepriseManagedEntity = entrepriseRepoistory.findById(entrepriseId).get();
-				Departement depManagedEntity = deptRepoistory.findById(depId).get();
+		Optional<Entreprise> Entrepriseop= this.entrepriseRepoistory.findById(entrepriseId);
+		Optional<Departement> Departementop= this.deptRepoistory.findById(depId);
+		if (Entrepriseop.isPresent() && Departementop.isPresent()){
+				Entreprise entrepriseManagedEntity = Entrepriseop.get();
+				Departement depManagedEntity = Departementop.get();
 				
 				depManagedEntity.setEntreprise(entrepriseManagedEntity);
 				deptRepoistory.save(depManagedEntity);
 		
-	}
+	}}
 	
 	public List<String> getAllDepartementsNamesByEntreprise(int entrepriseId) {
-		Entreprise entrepriseManagedEntity = entrepriseRepoistory.findById(entrepriseId).get();
+		Optional<Entreprise> Entrepriseop= this.entrepriseRepoistory.findById(entrepriseId);
+		Entreprise entrepriseManagedEntity =Entrepriseop.get();
 		List<String> depNames = new ArrayList<>();
 		for(Departement dep : entrepriseManagedEntity.getDepartements()){
 			depNames.add(dep.getName());
 		}
-		
+	
 		return depNames;
 	}
 
@@ -66,9 +65,11 @@ public class EntrepriseServiceImpl implements IEntrepriseService {
 
 	@Transactional
 	public void deleteDepartementById(int depId) {
-		deptRepoistory.delete(deptRepoistory.findById(depId).get());	
+		Optional<Departement> Departementop= this.deptRepoistory.findById(depId);
+		if( Departementop.isPresent()){
+		deptRepoistory.delete(Departementop.get());	
 	}
-
+	}
 
 	public Entreprise getEntrepriseById(int entrepriseId) {
 		return entrepriseRepoistory.findById(entrepriseId).get();	
