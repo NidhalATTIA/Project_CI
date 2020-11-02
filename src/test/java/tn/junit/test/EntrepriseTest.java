@@ -1,7 +1,5 @@
 package tn.junit.test;
 
-<<<<<<< HEAD
-=======
 /*import org.junit.Test;
 >>>>>>> main
 import static org.junit.Assert.assertNotNull;

@@ -12,8 +12,6 @@ import tn.esprit.spring.services.EmployeServiceImpl;
 <<<<<<< HEAD
 =======
 */
->>>>>>> main
-
 public class EmployeTest {
 
 	/*EmployeServiceImpl employeService = new EmployeServiceImpl();
@@ -45,19 +43,11 @@ public class EmployeTest {
 	// assertNotNull(employeService.affecterEmployeADepartement(employeId,depId));
 	// }*/
 
-}
-=======
-		assertNotNull(employeService.getTimesheetsByMissionAndDate(employe,mission,dateDebut,dateFin));
-	}*/
-
 	/*@Test
 	public void testaffecterEmployeADepartement() {
 		assertNotNull(employeService.affecterEmployeADepartement(employeId,depId));
 
 	}
 	*/
-
-	
 }
 
->>>>>>> main
