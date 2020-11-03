@@ -31,13 +31,13 @@ public class EntrepriseTest {
 
 	@Test
 	public void testGetEntrepriseById() {
-		es.getEntrepriseById(10);
-		assertNotNull(es.getEntrepriseById(10));
+		es.getEntrepriseById(3);
+		assertNotNull(es.getEntrepriseById(3));
 	}
 
 	@Test
 	public void testDeleteEntreprise() {
-		es.deleteEntrepriseById(7);
+		es.deleteEntrepriseById(16);
 	}
 
 	@Test
