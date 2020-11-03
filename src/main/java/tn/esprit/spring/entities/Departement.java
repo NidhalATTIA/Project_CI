@@ -29,7 +29,7 @@ public class Departement implements Serializable {
 	@JsonIgnore
 	@ManyToMany
 	private List<Employe> employes;        //test by nidhal
-	
+												//test jenkins 2
 	@OneToMany(mappedBy="departement")
 	private List<Mission> missions;
 	
