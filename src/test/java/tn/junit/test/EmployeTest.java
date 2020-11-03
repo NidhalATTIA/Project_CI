@@ -2,8 +2,6 @@ package tn.junit.test;
 
 import org.junit.Test;
 import static org.junit.Assert.assertNotNull;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +24,7 @@ public class EmployeTest {
 	LocalDate dateDebut = LocalDate.now();
 	LocalDate dateFin = LocalDate.now();
 	
-	DateFormat format = new SimpleDateFormat("yyyy/MM/dd");
+	//DateFormat format = new SimpleDateFormat("yyyy/MM/dd");
 
 	//raya
 	@Test
