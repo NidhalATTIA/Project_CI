@@ -1,7 +1,10 @@
 package tn.junit.test;
 
+import org.junit.Test;
+import static org.junit.Assert.assertNotNull;
 
-import static org.junit.Assert.*;
+import java.util.Date;
+
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -16,8 +19,13 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import tn.esprit.spring.TimesheetSpringBootCoreDataJpaMvcRest1Application;
+import tn.esprit.spring.entities.Contrat;
 import tn.esprit.spring.entities.Employe;
 import tn.esprit.spring.entities.Mission;
+
+import tn.esprit.spring.services.EmployeServiceImpl;
+
+
 import tn.esprit.spring.entities.Role;
 import tn.esprit.spring.entities.Timesheet;
 import tn.esprit.spring.services.IEmployeService;
@@ -34,7 +42,7 @@ public class EmployeTest {
 	LocalDate dateFin = LocalDate.now();
 	
 	DateFormat format = new SimpleDateFormat("yyyy/MM/dd");
-/*
+
 	//raya
 	@Test
 	public void testAjoutEmploye() {  	
@@ -58,23 +66,21 @@ public class EmployeTest {
 		Employe employe5=new Employe("yosra","arbi","yosra.arbi@ssiiconsulting.tn",true,Role.CHEF_DEPARTEMENT);
 		es.ajouterEmploye(employe5);
 		assertNotNull(es.ajouterEmploye(employe5));	
-	}*/
+	}
 	
-	
+	/*
 	//Elyes
 	@Test
 	public void testAjoutTimeSheet() throws ParseException {  	
 		//ajout Time Sheet:
-		Mission m1;
+		Mission m1=new Mission("test",  "test");
 		Employe e1=new Employe("khaled","Kalel","khaled.kalel@ssiiconsulting.tn",true,Role.INGENIEUR);
 		Date dateDebut = format.parse("2020/09/03");
 		Date dateFin = format.parse("2020/10/10");
 		Timesheet timesheet1=new Timesheet(m1,e1);
-		ts.ajouterTimesheet(1,1,dateDebut,dateFin);
-	}
+		ts.ajouterTimesheet2(timesheet1);
+	}*/
 
 }
-
-	
 
 

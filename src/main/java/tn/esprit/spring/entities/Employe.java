@@ -61,41 +61,13 @@ public class Employe implements Serializable {
 		super();
 	}
 	
-	public Employe(String prenom, String nom, String email,  boolean isActif, Role role) {
-		super();
-		this.prenom = prenom;
+	public Employe(String nom, String prenom, String email, boolean isActif, Role role) {
 		this.nom = nom;
+		this.prenom = prenom;
 		this.email = email;
 		this.isActif = isActif;
 		this.role = role;
 	}
-
-	public Employe(int id, String prenom, String nom, String email, boolean isActif, Role role,
-			List<Departement> departements, Contrat contrat, List<Timesheet> timesheets) {
-		super();
-		this.id = id;
-		this.prenom = prenom;
-		this.nom = nom;
-		this.email = email;
-		this.isActif = isActif;
-		this.role = role;
-		this.departements = departements;
-		this.contrat = contrat;
-		this.timesheets = timesheets;
-	}
-
-
-
-	public Employe(String email,boolean isActif,String nom,  String prenom, Role role) {
-		super();
-		this.email = email;
-		this.isActif = isActif;
-		this.nom = nom;
-		this.prenom = prenom;
-		this.role = role;
-	}
-
-
 	
 	public int getId() {
 		return id;

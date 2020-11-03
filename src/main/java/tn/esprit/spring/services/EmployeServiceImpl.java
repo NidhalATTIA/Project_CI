@@ -19,6 +19,7 @@ import tn.esprit.spring.entities.Timesheet;
 import tn.esprit.spring.repository.ContratRepository;
 import tn.esprit.spring.repository.DepartementRepository;
 import tn.esprit.spring.repository.EmployeRepository;
+import tn.esprit.spring.repository.MissionRepository;
 import tn.esprit.spring.repository.TimesheetRepository;
 
 @Service
@@ -32,36 +33,28 @@ public class EmployeServiceImpl implements IEmployeService {
 	ContratRepository contratRepoistory;
 	@Autowired
 	TimesheetRepository timesheetRepository;
-
+	@Autowired
+	MissionRepository missionRepository;
 	
 	///raya :employe
-	@Override
 	public int ajouterEmploye(Employe employe) {
-	
-			l.info("In ajouterEmploye() : ");
-			l.debug("Je viens de lancer l'ajout des employes. ");
-			employeRepository.save(employe);
-			l.debug("Je viens de finir l'ajout des employes.");
-
-		return 0;
+		l.debug("Je viens de lancer l'ajout des employes. " );
+		employeRepository.save(employe);
+		l.info("Ajout done!!!! ");
 		
+		return employe.getId();
 	}
 
 	public void mettreAjourEmailByEmployeId(String email, int employeId) {
-		
+		//l.debug("Je viens de lancer mettreAjourEmailByEmployeId. " );
 		Optional<Employe> employeop= this.employeRepository.findById(employeId);
-		if (employeop.isPresent() ){
-			l.debug("Je viens de lancer mettreAjourEmailByEmployeId" );
+		if (employeop.isPresent() ){	
 		Employe employe = employeop.get();
 		employe.setEmail(email);
 		l.info("mettreAjourEmailByEmployeId done!!!! ");
 		employeRepository.save(employe);
 		}
 	}
-	
-	
-	
-	
 
 	@Transactional	
 	public void affecterEmployeADepartement(int employeId, int depId) {
@@ -129,6 +122,8 @@ public class EmployeServiceImpl implements IEmployeService {
 		Employe employeManagedEntity = employeop.get();
 		l.info("getEmployePrenomById done!!!! ");
 		return employeManagedEntity.getPrenom();
+		
+		
 	}
 	public void deleteEmployeById(int employeId)
 	{
@@ -193,6 +188,27 @@ public class EmployeServiceImpl implements IEmployeService {
 
 	public List<Employe> getAllEmployes() {
 				return (List<Employe>) employeRepository.findAll();
+	}
+
+	@Override
+	public int ajouterMission(Mission mission) {
+		l.debug("Je viens de lancer l'ajout des missions. " );
+		missionRepository.save(mission);
+		l.info("Ajout done!!!! ");
+		
+		return mission.getId();
+	}
+
+	@Override
+	public void deleteMissionById(int missionId) {
+		l.debug("Je viens de lancer deleteMissionById. " );
+		Optional<Mission> missionop= this.missionRepository.findById(missionId);
+		
+		if (missionop.isPresent() ){	
+			Mission mission = missionop.get();
+	missionRepository.delete(mission);
+		l.info("delete done!!!! ");
+	}
 	}
 
 }
