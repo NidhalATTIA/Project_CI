@@ -73,6 +73,5 @@ public class EntrepriseServiceImpl implements IEntrepriseService {
 	public Entreprise getEntrepriseById(int entrepriseId) {
 		Optional<Entreprise> Entrepriseop= this.entrepriseRepoistory.findById(entrepriseId);
 		return Entrepriseop.get();	
-	
 	}
 }
