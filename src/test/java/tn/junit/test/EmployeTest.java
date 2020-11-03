@@ -26,7 +26,7 @@ public class EmployeTest {
 	
 	//DateFormat format = new SimpleDateFormat("yyyy/MM/dd");
 
-	//raya
+	//raya test
 	@Test
 	public void testAjoutEmploye() {  	
 		//ajout Employe:
