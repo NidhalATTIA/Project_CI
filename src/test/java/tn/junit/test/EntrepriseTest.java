@@ -44,6 +44,5 @@ public class EntrepriseTest {
 		Entreprise entreprise = new Entreprise(12);
 		emp.getAllEmployeByEntreprise(entreprise);
 		assertNotNull(emp.getAllEmployeByEntreprise(entreprise));
-		
 	}
 }
