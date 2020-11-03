@@ -30,7 +30,7 @@ public class Departement implements Serializable {
 	@ManyToMany
 	private List<Employe> employes;        //test by nidhal
 												//test jenkins 2
-	@OneToMany(mappedBy="departement")
+	@OneToMany(mappedBy="departement") //test 3
 	private List<Mission> missions;
 	
 	@ManyToOne
