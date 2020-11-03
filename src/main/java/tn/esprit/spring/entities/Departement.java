@@ -28,9 +28,9 @@ public class Departement implements Serializable {
 	//@JsonManagedReference 
 	@JsonIgnore
 	@ManyToMany
-	private List<Employe> employes;
-	
-	@OneToMany(mappedBy="departement")
+	private List<Employe> employes;        //test by nidhal
+												//test jenkins 2
+	@OneToMany(mappedBy="departement") //test 3
 	private List<Mission> missions;
 	
 	@ManyToOne

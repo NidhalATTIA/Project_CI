@@ -19,14 +19,13 @@ import tn.esprit.spring.entities.Employe;
 import tn.esprit.spring.entities.Entreprise;
 import tn.esprit.spring.entities.Mission;
 import tn.esprit.spring.entities.Timesheet;
-import tn.esprit.spring.log4j.log4j;
 import tn.esprit.spring.services.IEmployeService;
 import tn.esprit.spring.services.IEntrepriseService;
 import tn.esprit.spring.services.ITimesheetService;
 
 @RestController
 public class RestControlEmploye {
-	private static final Logger l = Logger.getLogger(log4j.class);
+	private static final Logger l = Logger.getLogger(RestControlEmploye.class);
 
 	@Autowired
 	IEmployeService iemployeservice;
@@ -171,8 +170,6 @@ public class RestControlEmploye {
 		return iemployeservice.getSalaireMoyenByDepartementId(departementId);
 	}
 
-	///// sarra
-	// TODO
 	public List<Timesheet> getTimesheetsByMissionAndDate(Employe employe, Mission mission, Date dateDebut,
 			Date dateFin) {
 

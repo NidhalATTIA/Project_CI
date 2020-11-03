@@ -54,6 +54,10 @@ public class EmployeServiceImpl implements IEmployeService {
 		employeRepository.save(employe);
 		}
 	}
+	
+	
+	
+	
 
 	@Transactional	
 	public void affecterEmployeADepartement(int employeId, int depId) {
@@ -73,9 +77,14 @@ public class EmployeServiceImpl implements IEmployeService {
 
 			depManagedEntity.getEmployes().add(employeManagedEntity);
 
+
+		}
+
+
 		}}
 		
-	}
+
+	
 	@Transactional
 	public void desaffecterEmployeDuDepartement(int employeId, int depId)
 	{
