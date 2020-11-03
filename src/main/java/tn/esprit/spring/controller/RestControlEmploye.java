@@ -34,7 +34,6 @@ public class RestControlEmploye {
 	@Autowired
 	ITimesheetService itimesheetservice;
 
-	// http://localhost:8081/SpringMVC/servlet/ajouterEmployer
 	// {"id":1,"nom":"kallel", "prenom":"khaled",
 	// "email":"Khaled.kallel@ssiiconsulting.tn", "isActif":true,
 	// "role":"INGENIEUR"}
