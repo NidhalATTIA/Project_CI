@@ -11,10 +11,10 @@ import tn.esprit.spring.services.IEntrepriseService;
 
 public class EntrepriseTest {
 
-	EntrepriseServiceImpl entrepriseService = new EntrepriseServiceImpl();
-	IEntrepriseService entrepriseSer;
-	Entreprise entreprise = new Entreprise();
-	Departement dep = new Departement();
+//	EntrepriseServiceImpl entrepriseService = new EntrepriseServiceImpl();
+//	IEntrepriseService entrepriseSer;
+//	Entreprise entreprise = new Entreprise();
+//	Departement dep = new Departement();
 
 //	@Test
 	// public void testAjoutEntreprise() {
