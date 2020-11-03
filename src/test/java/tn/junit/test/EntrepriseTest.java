@@ -1,31 +1,41 @@
 package tn.junit.test;
 
-/*import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNotNull;
 
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
-import tn.esprit.spring.entities.Departement;
+import tn.esprit.spring.TimesheetSpringBootCoreDataJpaMvcRest1Application;
 import tn.esprit.spring.entities.Entreprise;
-import tn.esprit.spring.services.EntrepriseServiceImpl;
-import tn.esprit.spring.services.IEntrepriseService;*/
+import tn.esprit.spring.services.IEntrepriseService;
 
-/*public class EntrepriseTest {
+@RunWith(SpringRunner.class)
+@SpringBootTest(classes = TimesheetSpringBootCoreDataJpaMvcRest1Application.class)
+public class EntrepriseTest {
+	@Autowired
+	IEntrepriseService es;
+	Entreprise entreprise;
 
-//	EntrepriseServiceImpl entrepriseService = new EntrepriseServiceImpl();
-//	IEntrepriseService entrepriseSer;
-//	Entreprise entreprise = new Entreprise();
-//	Departement dep = new Departement();
+	@Test
+	public void testAjoutEntreprise() {
+		Entreprise entreprise = new Entreprise("sahar", "mansouri");
+		es.ajouterEntreprise(entreprise);
+		assertNotNull(es.ajouterEntreprise(entreprise));
+	}
 
-//	@Test
-	// public void testAjoutEntreprise() {
-	// Entreprise u = new Entreprise("sahar", "sahar");
-	// entrepriseSer.ajouterEntreprise(u);
-	// assertNotNull(entrepriseService.ajouterEntreprise(new Entreprise("sahar",
-	// "sahar")));
-//	}
+	@Test
+	public void testGetEntrepriseById() {
+		es.getEntrepriseById(10);
+		assertNotNull(es.getEntrepriseById(10));
+	}
+	
+	
+	@Test
+	public void testDeleteEntreprise() {
+		es.deleteEntrepriseById(7);
+	}
 
-	// @Test
-	// public void testAjoutDepartement() {
-	// assertNotNull(entrepriseService.ajouterDepartement(dep));
-//	}
-
-}*/
+}

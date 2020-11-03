@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import tn.esprit.spring.entities.Departement;
+import tn.esprit.spring.entities.Employe;
 import tn.esprit.spring.entities.Entreprise;
 import tn.esprit.spring.log4j.log4j;
 import tn.esprit.spring.repository.DepartementRepository;
@@ -22,24 +23,42 @@ public class EntrepriseServiceImpl implements IEntrepriseService {
 
 	@Autowired
 	EntrepriseRepository entrepriseRepoistory;
+
+	Entreprise entreprise;
 	@Autowired
 	DepartementRepository deptRepoistory;
 
+/// sahaar 
 	public int ajouterEntreprise(Entreprise entreprise) {
-		l.debug("Je viens de lancer l'ajout des entreprises! ");
+		l.debug("Je viens de lancer ajouterEntreprise ! ");
 		entrepriseRepoistory.save(entreprise);
-		l.info("Ajouté !");
+		l.info("ajouterEntreprise done !");
 		return entreprise.getId();
+	}
+
+	/// sahaar
+	public Entreprise getEntrepriseById(int entrepriseId) {
+		l.debug("Je viens de lancer getEntrepriseById :");
+		Optional<Entreprise> entrepriseop = this.entrepriseRepoistory.findById(entrepriseId);
+		Entreprise entreprise = entrepriseop.get();
+		l.info("getEntrepriseById done !" + "nom :" + entreprise.getName() + "raison :" + entreprise.getRaisonSocial());
+		return entreprise;
 
 	}
 
-	public int ajouterDepartement(Departement dep) {
-		l.debug("Je viens de lancer l'ajout des departements! ");
-		deptRepoistory.save(dep);
-		l.info("Ajouté !");
-		return dep.getId();
+	/// sahaar
+	@Transactional
+	public void deleteEntrepriseById(int entrepriseId) {
+		l.debug("Je viens de lancer deleteEntrepriseById ! ");
+		entrepriseRepoistory.delete(entrepriseRepoistory.findById(entrepriseId).get());
+		l.info("deleteEntrepriseById done ! l'entreprise qui a l'Id " + entrepriseId + " est supprimée !");
+		Optional<Entreprise> entrepriseop = this.entrepriseRepoistory.findById(entrepriseId);
+		if (entrepriseop.isPresent()) {
+			entrepriseRepoistory.delete(entrepriseop.get());
+		}
 	}
 
+	/// sahaar
 	public void affecterDepartementAEntreprise(int depId, int entrepriseId) {
 		Optional<Departement> Departementop = this.deptRepoistory.findById(depId);
 		Optional<Entreprise> Entrepriseop = this.entrepriseRepoistory.findById(entrepriseId);
@@ -49,8 +68,15 @@ public class EntrepriseServiceImpl implements IEntrepriseService {
 			depManagedEntity.setEntreprise(entrepriseManagedEntity);
 			l.debug("Departmement affecté a l'entreprise! ");
 			deptRepoistory.save(depManagedEntity);
-
 		}
+	}
+
+	//// nidhal
+	public int ajouterDepartement(Departement dep) {
+		l.debug("Je viens de lancer l'ajout des departements! ");
+		deptRepoistory.save(dep);
+		l.info("Ajouté !");
+		return dep.getId();
 	}
 
 	public List<String> getAllDepartementsNamesByEntreprise(int entrepriseId) {
@@ -59,20 +85,8 @@ public class EntrepriseServiceImpl implements IEntrepriseService {
 		for (Departement dep : entrepriseManagedEntity.getDepartements()) {
 			depNames.add(dep.getName());
 		}
-		l.debug("Liste des departements par entreprise! ");
+		l.debug("Liste des departements par entreprise ! ");
 		return depNames;
-	}
-	
-
-	@Transactional
-	public void deleteEntrepriseById(int entrepriseId) {
-		entrepriseRepoistory.delete(entrepriseRepoistory.findById(entrepriseId).get());
-		l.info("entreprise supprimée!");
-		Optional<Entreprise> entrepriseop = this.entrepriseRepoistory.findById(entrepriseId);
-		if (entrepriseop.isPresent()) {
-			entrepriseRepoistory.delete(entrepriseop.get());
-		}
-
 	}
 
 	@Transactional
@@ -85,8 +99,4 @@ public class EntrepriseServiceImpl implements IEntrepriseService {
 		}
 	}
 
-	public Entreprise getEntrepriseById(int entrepriseId) {
-		return entrepriseRepoistory.findById(entrepriseId).get();
-
-	}
 }
