@@ -34,9 +34,7 @@ public class EntrepriseTest {
 		es.getEntrepriseById(10);
 		assertNotNull(es.getEntrepriseById(10));
 	}
-	
-	
-	
+
 	@Test
 	public void testDeleteEntreprise() {
 		es.deleteEntrepriseById(7);
