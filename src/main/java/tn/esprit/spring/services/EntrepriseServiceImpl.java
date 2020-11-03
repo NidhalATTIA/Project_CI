@@ -56,7 +56,6 @@ public class EntrepriseServiceImpl implements IEntrepriseService {
 			Entreprise entrepriseManagedEntity = entrepriseop.get();
 			entrepriseRepoistory.delete(entrepriseManagedEntity);
 		}
-
 	}
 
 	/// sahaar
