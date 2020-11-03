@@ -11,16 +11,10 @@ import tn.esprit.spring.entities.Timesheet;
 
 
 public interface IEmployeService {
-<<<<<<< HEAD
 	public int ajouterMission(Mission mission);
 	public int ajouterEmploye(Employe employe);
 	public void mettreAjourEmailByEmployeId(String email, int employeId);
 
-=======
-	
-	public int ajouterEmploye(Employe employe);
-	public void mettreAjourEmailByEmployeId(String email, int employeId);
->>>>>>> c6c900da09918173da203e55d2cb10f521039e1c
 	public void affecterEmployeADepartement(int employeId, int depId);
 	public void desaffecterEmployeDuDepartement(int employeId, int depId);
 	public int ajouterContrat(Contrat contrat);
