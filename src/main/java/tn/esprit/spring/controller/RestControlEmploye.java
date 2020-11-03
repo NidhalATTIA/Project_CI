@@ -34,7 +34,6 @@ public class RestControlEmploye {
 	@Autowired
 	ITimesheetService itimesheetservice;
 
-	// {"id":1,"nom":"kallel", "prenom":"khaled",
 	// "email":"Khaled.kallel@ssiiconsulting.tn", "isActif":true,
 	// "role":"INGENIEUR"}
 
