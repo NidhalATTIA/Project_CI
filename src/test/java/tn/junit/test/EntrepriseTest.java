@@ -33,6 +33,7 @@ public class EntrepriseTest {
 	}
 	
 	
+	
 	@Test
 	public void testDeleteEntreprise() {
 		es.deleteEntrepriseById(7);
