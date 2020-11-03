@@ -1,20 +1,19 @@
 package tn.junit.test;
 
-import static org.junit.Assert.assertNotNull;
+/*import static org.junit.Assert.assertNotNull;
 
-import org.junit.Test;
 
 import tn.esprit.spring.entities.Departement;
 import tn.esprit.spring.entities.Entreprise;
 import tn.esprit.spring.services.EntrepriseServiceImpl;
-import tn.esprit.spring.services.IEntrepriseService;
+import tn.esprit.spring.services.IEntrepriseService;*/
 
-public class EntrepriseTest {
+/*public class EntrepriseTest {
 
-	EntrepriseServiceImpl entrepriseService = new EntrepriseServiceImpl();
-	IEntrepriseService entrepriseSer;
-	Entreprise entreprise = new Entreprise();
-	Departement dep = new Departement();
+//	EntrepriseServiceImpl entrepriseService = new EntrepriseServiceImpl();
+//	IEntrepriseService entrepriseSer;
+//	Entreprise entreprise = new Entreprise();
+//	Departement dep = new Departement();
 
 //	@Test
 	// public void testAjoutEntreprise() {
@@ -29,4 +28,4 @@ public class EntrepriseTest {
 	// assertNotNull(entrepriseService.ajouterDepartement(dep));
 //	}
 
-}
+}*/

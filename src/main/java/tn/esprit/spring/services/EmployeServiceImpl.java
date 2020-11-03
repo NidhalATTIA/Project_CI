@@ -35,18 +35,23 @@ public class EmployeServiceImpl implements IEmployeService {
 
 	
 	///raya :employe
+	@Override
 	public int ajouterEmploye(Employe employe) {
-		l.debug("Je viens de lancer l'ajout des employes. " );
-		employeRepository.save(employe);
-		l.info("Ajout done!!!! ");
+	
+			l.info("In ajouterEmploye() : ");
+			l.debug("Je viens de lancer l'ajout des employes. ");
+			employeRepository.save(employe);
+			l.debug("Je viens de finir l'ajout des employes.");
+
+		return 0;
 		
-		return employe.getId();
 	}
 
 	public void mettreAjourEmailByEmployeId(String email, int employeId) {
-		//l.debug("Je viens de lancer mettreAjourEmailByEmployeId. " );
+		
 		Optional<Employe> employeop= this.employeRepository.findById(employeId);
-		if (employeop.isPresent() ){	
+		if (employeop.isPresent() ){
+			l.debug("Je viens de lancer mettreAjourEmailByEmployeId" );
 		Employe employe = employeop.get();
 		employe.setEmail(email);
 		l.info("mettreAjourEmailByEmployeId done!!!! ");
@@ -124,8 +129,6 @@ public class EmployeServiceImpl implements IEmployeService {
 		Employe employeManagedEntity = employeop.get();
 		l.info("getEmployePrenomById done!!!! ");
 		return employeManagedEntity.getPrenom();
-		
-		
 	}
 	public void deleteEmployeById(int employeId)
 	{

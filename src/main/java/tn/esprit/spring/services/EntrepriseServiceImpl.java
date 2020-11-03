@@ -62,6 +62,7 @@ public class EntrepriseServiceImpl implements IEntrepriseService {
 		l.debug("Liste des departements par entreprise! ");
 		return depNames;
 	}
+	
 
 	@Transactional
 	public void deleteEntrepriseById(int entrepriseId) {
@@ -86,6 +87,6 @@ public class EntrepriseServiceImpl implements IEntrepriseService {
 
 	public Entreprise getEntrepriseById(int entrepriseId) {
 		return entrepriseRepoistory.findById(entrepriseId).get();
-	}
 
+	}
 }
