@@ -36,13 +36,6 @@ public class EmployeServiceImpl implements IEmployeService {
 	@Autowired
 	MissionRepository missionRepository;
 	
-<<<<<<< HEAD
-	///raya :employe
-	public int ajouterEmploye(Employe employe) {
-		l.debug("Je viens de lancer l'ajout des employes. " );
-		employeRepository.save(employe);
-		l.info("Ajout done!!!! ");
-=======
 	///////////////////raya :employe
 	@Override
 	public int ajouterEmploye(Employe employe) {
@@ -58,21 +51,9 @@ public class EmployeServiceImpl implements IEmployeService {
 		}
 		
 		return employe.getId();	
->>>>>>> RayaBranche
-		
-		return employe.getId();
 	}
 
 	public void mettreAjourEmailByEmployeId(String email, int employeId) {
-<<<<<<< HEAD
-		//l.debug("Je viens de lancer mettreAjourEmailByEmployeId. " );
-		Optional<Employe> employeop= this.employeRepository.findById(employeId);
-		if (employeop.isPresent() ){	
-		Employe employe = employeop.get();
-		employe.setEmail(email);
-		l.info("mettreAjourEmailByEmployeId done!!!! ");
-		employeRepository.save(employe);
-=======
 		try {
 		l.info("In mettreAjourEmailByEmployeId() : ");
 	Optional<Employe> employeop= this.employeRepository.findById(employeId);
@@ -125,13 +106,11 @@ public class EmployeServiceImpl implements IEmployeService {
 			l.info("Out mettreAjourEmailByEmployeId() without errors.");
 		}} catch (Exception e) {
 			l.error("Erreur dans ajouterEmploye() : " + e);
->>>>>>> RayaBranche
+
 		}
 	
 	}
-<<<<<<< HEAD
-=======
-	
+
 	public int getNombreEmployeJPQL() {
 		try {
 			l.info("In getNombreEmployeJPQL() : ");
@@ -178,7 +157,7 @@ public class EmployeServiceImpl implements IEmployeService {
 	
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
->>>>>>> RayaBranche
+
 
 	@Transactional	
 	public void affecterEmployeADepartement(int employeId, int depId) {
@@ -240,37 +219,8 @@ public class EmployeServiceImpl implements IEmployeService {
 		
 	}}
 
-<<<<<<< HEAD
-	public String getEmployePrenomById(int employeId) {
-		l.debug("Je viens de lancer getEmployePrenomById. " );
-		Optional<Employe> employeop= this.employeRepository.findById(employeId);
-		Employe employeManagedEntity = employeop.get();
-		l.info("getEmployePrenomById done!!!! ");
-		return employeManagedEntity.getPrenom();
-		
-		
-	}
-	public void deleteEmployeById(int employeId)
-	{
-		l.debug("Je viens de lancer deleteEmployeById. " );
-		Optional<Employe> employeop= this.employeRepository.findById(employeId);
-		
-		if (employeop.isPresent() ){	
-		Employe employe = employeop.get();
 
-		//Desaffecter l'employe de tous les departements
-		//c'est le bout master qui permet de mettre a jour
-		//la table d'association
-		for(Departement dep : employe.getDepartements()){
-			dep.getEmployes().remove(employe);
-		}
-		
-		employeRepository.delete(employe);
-		l.info("delete done!!!! ");
-	}}
-=======
-	
->>>>>>> RayaBranche
+
 
 	public void deleteContratById(int contratId) {
 		Optional<Contrat> Contratop= this.contratRepoistory.findById(contratId);

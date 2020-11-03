@@ -1,6 +1,5 @@
 package tn.junit.test;
 
-<<<<<<< HEAD
 import static org.junit.Assert.assertNotNull;
 
 import org.junit.Test;
@@ -51,21 +50,6 @@ public class EntrepriseTest {
 
 	}
 }
-=======
-/*import org.junit.Test;
-import static org.junit.Assert.assertNotNull;
 
-import tn.esprit.spring.entities.Entreprise;
-import tn.esprit.spring.services.EntrepriseServiceImpl;*/
 
-public class EntrepriseTest {
 
-/*	EntrepriseServiceImpl entrepriseService = new EntrepriseServiceImpl();
-	Entreprise entreprise = new Entreprise();
-	@Test
-	public void testAjoutEntreprise() {
-		assertNotNull(entrepriseService.ajouterEntreprise(entreprise));
-	}*/
-
-}	
->>>>>>> b27b361ba29dd57e6f1c45b322fcaea42f8793fd
