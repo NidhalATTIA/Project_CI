@@ -11,14 +11,13 @@ import org.springframework.transaction.annotation.Transactional;
 
 import tn.esprit.spring.entities.Departement;
 import tn.esprit.spring.entities.Entreprise;
-import tn.esprit.spring.log4j.log4j;
 import tn.esprit.spring.repository.DepartementRepository;
 import tn.esprit.spring.repository.EntrepriseRepository;
 
 @Service
 public class EntrepriseServiceImpl implements IEntrepriseService {
 
-	private static final Logger l = Logger.getLogger(log4j.class);
+	private static final Logger l = Logger.getLogger(EntrepriseServiceImpl.class);
 
 	@Autowired
 	EntrepriseRepository entrepriseRepoistory;
