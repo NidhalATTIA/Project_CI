@@ -199,4 +199,16 @@ public class EmployeServiceImpl implements IEmployeService {
 		return mission.getId();
 	}
 
+	@Override
+	public void deleteMissionById(int missionId) {
+		l.debug("Je viens de lancer deleteMissionById. " );
+		Optional<Mission> missionop= this.missionRepository.findById(missionId);
+		
+		if (missionop.isPresent() ){	
+			Mission mission = missionop.get();
+	missionRepository.delete(mission);
+		l.info("delete done!!!! ");
+	}
+	}
+
 }

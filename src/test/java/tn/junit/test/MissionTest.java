@@ -19,11 +19,20 @@ public class MissionTest {
 	@Autowired 
 	IEmployeService es;
 	@Test
-	public void testAjoutEmploye() {  
+	public void testAjoutMission() {  
 		
-		//ajout Employe:
+		//ajout mission:
 	Mission miss1=new Mission("mission de sarra","une mission trés simple");
 	es.ajouterMission(miss1);
 	assertNotNull(es.ajouterMission(miss1));
+	
+	Mission miss2=new Mission("mission de test","une mission trés simple");
+	es.ajouterMission(miss2);
+	assertNotNull(es.ajouterMission(miss2));
 }
+	
+	@Test
+	public void testdeleteMissionById() {
+		es.deleteMissionById(2);
+	}
 }
