@@ -1,7 +1,6 @@
 package tn.junit.test;
 
 import static org.junit.Assert.assertNotNull;
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,6 +44,5 @@ public class EntrepriseTest {
 		Entreprise entreprise = new Entreprise(12);
 		emp.getAllEmployeByEntreprise(entreprise);
 		assertNotNull(emp.getAllEmployeByEntreprise(entreprise));
-
 	}
 }
