@@ -36,16 +36,35 @@ public class EmployeServiceImpl implements IEmployeService {
 	@Autowired
 	MissionRepository missionRepository;
 	
+<<<<<<< HEAD
 	///raya :employe
 	public int ajouterEmploye(Employe employe) {
 		l.debug("Je viens de lancer l'ajout des employes. " );
 		employeRepository.save(employe);
 		l.info("Ajout done!!!! ");
+=======
+	///////////////////raya :employe
+	@Override
+	public int ajouterEmploye(Employe employe) {
+	
+		try {
+			l.info("In ajouterEmploye() : ");
+			l.debug("Je viens de lancer l'ajouterEmploye. ");
+			employeRepository.save(employe);
+			l.debug("Je viens de finir l'ajouterEmploye.");
+			l.info("Out ajouterEmploye() without errors.");
+		} catch (Exception e) {
+			l.error("Erreur dans ajouterEmploye() : " + e);
+		}
+		
+		return employe.getId();	
+>>>>>>> RayaBranche
 		
 		return employe.getId();
 	}
 
 	public void mettreAjourEmailByEmployeId(String email, int employeId) {
+<<<<<<< HEAD
 		//l.debug("Je viens de lancer mettreAjourEmailByEmployeId. " );
 		Optional<Employe> employeop= this.employeRepository.findById(employeId);
 		if (employeop.isPresent() ){	
@@ -53,8 +72,113 @@ public class EmployeServiceImpl implements IEmployeService {
 		employe.setEmail(email);
 		l.info("mettreAjourEmailByEmployeId done!!!! ");
 		employeRepository.save(employe);
+=======
+		try {
+		l.info("In mettreAjourEmailByEmployeId() : ");
+	Optional<Employe> employeop= this.employeRepository.findById(employeId);
+	if (employeop.isPresent() ){
+		l.debug("Je viens de lancer mettreAjourEmailByEmployeId" );
+			Employe employe = employeop.get();
+			employe.setEmail(email);
+			employeRepository.save(employe);
+			l.debug("Je viens de finir mettreAjourEmailByEmployeId.");
+			l.info("mettreAjourEmailByEmployeId done!!!! ");
+			l.info("Out mettreAjourEmailByEmployeId() without errors.");
+		}} catch (Exception e) {
+			l.error("Erreur dans ajouterEmploye() : " + e);
 		}
+		
+
 	}
+	
+	
+	public String getEmployePrenomById(int employeId) {
+	
+			l.info("In getEmployePrenomById() : ");
+			l.debug("Je viens de lancer getEmployePrenomById. " );
+			Optional<Employe> employeop= this.employeRepository.findById(employeId);
+			Employe employeManagedEntity = employeop.get();
+			l.debug("Je viens de finir et voici l'employer:  " + employeManagedEntity.getPrenom());
+			l.info("Out getEmployePrenomById() without errors et l'employe est: "+ employeManagedEntity.getPrenom());
+		
+		return employeManagedEntity.getPrenom();
+	}
+	
+	
+	public void deleteEmployeById(int employeId){
+		try {
+		l.info("In deleteEmployeById(): ");
+		l.debug("Je viens de lancer deleteEmployeById." );
+		Optional<Employe> employeop= this.employeRepository.findById(employeId);
+		if (employeop.isPresent() ){	
+			
+			l.debug("Je viens de lancer le delete" );
+			Employe employe = employeop.get();
+
+			for(Departement dep : employe.getDepartements()){
+				dep.getEmployes().remove(employe);
+			}	
+			employeRepository.delete(employe);
+			
+			l.debug("Je viens de finir le delete de l'employe "+employeId);
+			l.info("deleteEmployeById done!!!! ");
+			l.info("Out mettreAjourEmailByEmployeId() without errors.");
+		}} catch (Exception e) {
+			l.error("Erreur dans ajouterEmploye() : " + e);
+>>>>>>> RayaBranche
+		}
+	
+	}
+<<<<<<< HEAD
+=======
+	
+	public int getNombreEmployeJPQL() {
+		try {
+			l.info("In getNombreEmployeJPQL() : ");
+			l.debug("Je vais lancer le Nombre des Employes.");
+			l.debug("Je viens de lancer l'affichage des nbre des employes. ");
+			l.debug("Je viens de finir l'affichage des nbre des employes.");
+			l.info("Out getNombreEmployeJPQL() without errors.");
+		} catch (Exception e) {
+			l.error("Erreur dans getNombreEmployeJPQL() : " + e);
+		}
+		return employeRepository.countemp();
+	}
+	
+	public List<String> getAllEmployeNamesJPQL() {
+		try {
+			l.info("In getAllEmployeNamesJPQL() : ");
+			l.debug("Je vais lancer l'affichage des noms des employes.");
+			l.debug("Je viens de lancer l'affichage des noms des employes. ");
+			List<String> li=(List<String>)employeRepository.employeNames();
+			l.debug("Je viens de finir et l'affichage des noms des employes est: \n " +li);
+			l.info("Out getAllEmployeNamesJPQL() without errors.");
+		} catch (Exception e) {
+			l.error("Erreur dans getAllEmployeNamesJPQL() : " + e);
+		}
+		return employeRepository.employeNames();
+
+	}
+	
+	public List<Employe> getAllEmployes() {
+		try {
+			l.info("In getAllEmployes() : ");
+			l.debug("Je vais lancer l'affichage des employes.");
+			l.debug("Je viens de lancer l'affichage des employes. ");
+			List<Employe> emp = (List<Employe>)employeRepository.findAll();
+			l.debug("Je viens de finir et l'affichage des employes est: \n " +emp);
+			l.info("Out getAllEmployes() without errors.");
+		} catch (Exception e) {
+			l.error("Erreur dans getAllEmployes() : " + e);
+		}
+		return (List<Employe>) employeRepository.findAll();
+}
+	
+	
+	
+	/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	
+>>>>>>> RayaBranche
 
 	@Transactional	
 	public void affecterEmployeADepartement(int employeId, int depId) {
@@ -116,6 +240,7 @@ public class EmployeServiceImpl implements IEmployeService {
 		
 	}}
 
+<<<<<<< HEAD
 	public String getEmployePrenomById(int employeId) {
 		l.debug("Je viens de lancer getEmployePrenomById. " );
 		Optional<Employe> employeop= this.employeRepository.findById(employeId);
@@ -143,6 +268,9 @@ public class EmployeServiceImpl implements IEmployeService {
 		employeRepository.delete(employe);
 		l.info("delete done!!!! ");
 	}}
+=======
+	
+>>>>>>> RayaBranche
 
 	public void deleteContratById(int contratId) {
 		Optional<Contrat> Contratop= this.contratRepoistory.findById(contratId);
@@ -152,14 +280,6 @@ public class EmployeServiceImpl implements IEmployeService {
 		}
 	}
 
-	public int getNombreEmployeJPQL() {
-		return employeRepository.countemp();
-	}
-	
-	public List<String> getAllEmployeNamesJPQL() {
-		return employeRepository.employeNames();
-
-	}
 	
 	public List<Employe> getAllEmployeByEntreprise(Entreprise entreprise) {
 		return employeRepository.getAllEmployeByEntreprisec(entreprise);
@@ -186,9 +306,7 @@ public class EmployeServiceImpl implements IEmployeService {
 		return timesheetRepository.getTimesheetsByMissionAndDate(employe, mission, dateDebut, dateFin);
 	}
 
-	public List<Employe> getAllEmployes() {
-				return (List<Employe>) employeRepository.findAll();
-	}
+
 
 	@Override
 	public int ajouterMission(Mission mission) {
