@@ -35,12 +35,16 @@ public class EmployeServiceImpl implements IEmployeService {
 
 	
 	///raya :employe
+	@Override
 	public int ajouterEmploye(Employe employe) {
-		l.debug("Je viens de lancer l'ajout des employes. " );
-		employeRepository.save(employe);
-		l.info("Ajout done!!!! ");
+	
+			l.info("In ajouterEmploye() : ");
+			l.debug("Je viens de lancer l'ajout des employes. ");
+			employeRepository.save(employe);
+			l.debug("Je viens de finir l'ajout des employes.");
+
+		return 0;
 		
-		return employe.getId();
 	}
 
 	public void mettreAjourEmailByEmployeId(String email, int employeId) {
