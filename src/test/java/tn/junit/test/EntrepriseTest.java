@@ -10,6 +10,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import tn.esprit.spring.TimesheetSpringBootCoreDataJpaMvcRest1Application;
 import tn.esprit.spring.entities.Entreprise;
+import tn.esprit.spring.services.IEmployeService;
 import tn.esprit.spring.services.IEntrepriseService;
 
 @RunWith(SpringRunner.class)
@@ -18,6 +19,8 @@ public class EntrepriseTest {
 	@Autowired
 	IEntrepriseService es;
 	Entreprise entreprise;
+	@Autowired
+	IEmployeService emp;
 
 	@Test
 	public void testAjoutEntreprise() {
@@ -39,4 +42,11 @@ public class EntrepriseTest {
 		es.deleteEntrepriseById(7);
 	}
 
+	@Test
+	public void testGetAllEmployeByEntreprise() {
+		Entreprise entreprise = new Entreprise(12);
+		emp.getAllEmployeByEntreprise(entreprise);
+		assertNotNull(emp.getAllEmployeByEntreprise(entreprise));
+
+	}
 }

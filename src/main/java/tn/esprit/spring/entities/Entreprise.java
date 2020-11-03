@@ -114,6 +114,11 @@ public class Entreprise implements Serializable{
 	}
 
 
+	public Entreprise(int id) {
+		this.id = id;
+	}
+
+
 
 
 }
