@@ -19,6 +19,7 @@ import tn.esprit.spring.entities.Timesheet;
 import tn.esprit.spring.repository.ContratRepository;
 import tn.esprit.spring.repository.DepartementRepository;
 import tn.esprit.spring.repository.EmployeRepository;
+import tn.esprit.spring.repository.MissionRepository;
 import tn.esprit.spring.repository.TimesheetRepository;
 
 @Service
@@ -32,7 +33,8 @@ public class EmployeServiceImpl implements IEmployeService {
 	ContratRepository contratRepoistory;
 	@Autowired
 	TimesheetRepository timesheetRepository;
-
+	@Autowired
+	MissionRepository missionRepository;
 	
 	///raya :employe
 	public int ajouterEmploye(Employe employe) {
@@ -186,6 +188,15 @@ public class EmployeServiceImpl implements IEmployeService {
 
 	public List<Employe> getAllEmployes() {
 				return (List<Employe>) employeRepository.findAll();
+	}
+
+	@Override
+	public int ajouterMission(Mission mission) {
+		l.debug("Je viens de lancer l'ajout des missions. " );
+		missionRepository.save(mission);
+		l.info("Ajout done!!!! ");
+		
+		return mission.getId();
 	}
 
 }
