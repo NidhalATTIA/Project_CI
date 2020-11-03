@@ -1,13 +1,13 @@
 package tn.junit.test;
 
-import static org.junit.Assert.assertNotNull;
+/*import static org.junit.Assert.assertNotNull;
 
 import org.junit.Test;
 
 import tn.esprit.spring.entities.Departement;
 import tn.esprit.spring.entities.Entreprise;
 import tn.esprit.spring.services.EntrepriseServiceImpl;
-import tn.esprit.spring.services.IEntrepriseService;
+import tn.esprit.spring.services.IEntrepriseService;*/
 
 public class EntrepriseTest {
 
