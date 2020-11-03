@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,6 +22,7 @@ import tn.esprit.spring.repository.TimesheetRepository;
 
 @Service
 public class TimesheetServiceImpl implements ITimesheetService {
+	private static final Logger l = Logger.getLogger(EmployeServiceImpl.class);
 	
 
 	@Autowired
@@ -102,6 +104,12 @@ public class TimesheetServiceImpl implements ITimesheetService {
 	
 	public List<Employe> getAllEmployeByMission(int missionId) {
 		return timesheetRepository.getAllEmployeByMission(missionId);
+	}
+	
+	public void ajouterTimesheet2(Timesheet timesheet) {
+		l.debug("Je viens de lancer l'ajout des timesheets. " );
+		timesheetRepository.save(timesheet);
+		l.info("Ajout done!!!! ");
 	}
 
 }

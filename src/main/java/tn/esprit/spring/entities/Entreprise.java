@@ -39,6 +39,10 @@ public class Entreprise implements Serializable{
 		super();
 	}
 
+	public Entreprise(String name, String raisonSocial) {
+		this.name = name;
+		this.raisonSocial = raisonSocial;
+	}
 
 	public int getId() {
 		return id;
@@ -64,12 +68,6 @@ public class Entreprise implements Serializable{
 		this.raisonSocial = raisonSocial;
 	}
 
-	public Entreprise(String name, String raisonSocial) {
-		super();
-		this.name = name;
-		this.raisonSocial = raisonSocial;
-	}
-
 	public List<Departement> getDepartements() {
 		return departements;
 	}
@@ -82,35 +80,6 @@ public class Entreprise implements Serializable{
 	public void addDepartement(Departement departement){
 		departement.setEntreprise(this);
 		this.departements.add(departement);
-	}
-
-	public Entreprise(int id, String name, String raisonSocial, List<Departement> departements) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.raisonSocial = raisonSocial;
-		this.departements = departements;
-	}
-
-	public Entreprise(String name, String raisonSocial, List<Departement> departements) {
-		super();
-		this.name = name;
-		this.raisonSocial = raisonSocial;
-		this.departements = departements;
-	}
-
-	@Override
-	public String toString() {
-		return "Entreprise [id=" + id + ", name=" + name + ", raisonSocial=" + raisonSocial + ", departements="
-				+ departements + "]";
-	}
-
-
-	public Entreprise(int id, String name, String raisonSocial) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.raisonSocial = raisonSocial;
 	}
 
 
