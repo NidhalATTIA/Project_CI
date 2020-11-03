@@ -16,8 +16,6 @@ public class EntrepriseTest {
 	Entreprise entreprise = new Entreprise();
 	Departement dep = new Departement();
 
-	
-	
 //	@Test
 	// public void testAjoutEntreprise() {
 	// Entreprise u = new Entreprise("sahar", "sahar");
