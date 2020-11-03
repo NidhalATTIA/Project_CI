@@ -23,7 +23,7 @@ public class EmployeTest {
 
 
 	//raya
-	@Test
+	/*@Test
 	public void testAjoutEmploye() {  
 		
 		//ajout Employe:
@@ -45,10 +45,40 @@ public class EmployeTest {
 	
 	Employe employe5=new Employe("yosra","arbi","yosra.arbi@ssiiconsulting.tn",true,Role.CHEF_DEPARTEMENT);
 	es.ajouterEmploye(employe5);
-	assertNotNull(es.ajouterEmploye(employe5));
-	
-			
+	assertNotNull(es.ajouterEmploye(employe5));	
 	}
+
+	@Test
+	public void testmettreAjourEmailByEmployeId() {  
+		//mettre ajour Email
+		es.mettreAjourEmailByEmployeId("raya.hadhri@esprit.tn",5);
+	}
+	
+	@Test
+	public void testgetEmployePrenomById() {  
+		es.getEmployePrenomById(5);
+		assertNotNull(es.getEmployePrenomById(5));
+	}
+	@Test
+	public void testdeleteEmployeById() {
+		es.deleteEmployeById(2);
+	}
+	
+	@Test
+	public void testgetNombreEmployeJPQL() {
+		es.getNombreEmployeJPQL();
+		assertNotNull(es.getNombreEmployeJPQL());
+	}
+	@Test
+	public void testgetAllEmployeNamesJPQL() {
+		es.getAllEmployeNamesJPQL();
+		assertNotNull(es.getAllEmployeNamesJPQL());
+	}
+	@Test
+	public void testgetAllEmployes() {
+		es.getAllEmployes();
+		assertNotNull(es.getAllEmployes());
+	}*/
 	}
 
 	
