@@ -23,7 +23,7 @@ public class EmployeTest {
 
 
 	//raya
-	/*@Test
+	@Test
 	public void testAjoutEmploye() {  
 		
 		//ajout Employe:
@@ -78,7 +78,7 @@ public class EmployeTest {
 	public void testgetAllEmployes() {
 		es.getAllEmployes();
 		assertNotNull(es.getAllEmployes());
-	}*/
+	}
 	}
 
 	
