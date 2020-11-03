@@ -76,7 +76,7 @@ public class RestControlEmploye {
 		iemployeservice.ajouterContrat(contrat);
 		l.info("les contrats ajoutés :" + contrat);
 
-		return contratDTO.getReference();
+		return contrat.getReference();
 	}
 
 	// http://localhost:8081/SpringMVC/servlet/affecterContratAEmploye/6/1
