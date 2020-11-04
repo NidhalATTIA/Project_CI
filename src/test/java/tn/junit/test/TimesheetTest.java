@@ -38,12 +38,12 @@ import tn.esprit.spring.entities.TimesheetPK;
 import tn.esprit.spring.repository.EmployeRepository;
 import tn.esprit.spring.repository.MissionRepository;
 import tn.esprit.spring.services.ITimesheetService;
-
+/*
 @RunWith(SpringRunner.class)
-@SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
+@SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)*/
 public class TimesheetTest {
 	
-	@LocalServerPort
+	/*@LocalServerPort
 	private int port;
 	
 	@Autowired
@@ -63,7 +63,7 @@ public class TimesheetTest {
 	static String strDateDebut;
 	static String strDateFin;
 	
-	 /*@BeforeClass
+	 @BeforeClass
 	 public static void setUp() {
 		mapper = new ObjectMapper();
 		employeId=3;
