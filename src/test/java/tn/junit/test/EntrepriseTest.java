@@ -31,20 +31,20 @@ public class EntrepriseTest {
 
 	@Test
 	public void testGetEntrepriseById() {
-		es.getEntrepriseById(10);
-		assertNotNull(es.getEntrepriseById(10));
+		es.getEntrepriseById(1);
+		assertNotNull(es.getEntrepriseById(1));
 	}
 	
 	
 	
 	@Test
 	public void testDeleteEntreprise() {
-		es.deleteEntrepriseById(7);
+		es.deleteEntrepriseById(2);
 	}
 
 	@Test
 	public void testGetAllEmployeByEntreprise() {
-		Entreprise entreprise = new Entreprise(12);
+		Entreprise entreprise = new Entreprise(2);
 		emp.getAllEmployeByEntreprise(entreprise);
 		assertNotNull(emp.getAllEmployeByEntreprise(entreprise));
 

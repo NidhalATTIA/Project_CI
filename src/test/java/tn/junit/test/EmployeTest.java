@@ -2,8 +2,6 @@ package tn.junit.test;
 
 import org.junit.Test;
 import static org.junit.Assert.assertNotNull;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,9 +24,8 @@ public class EmployeTest {
 	LocalDate dateDebut = LocalDate.now();
 	LocalDate dateFin = LocalDate.now();
 	
-	DateFormat format = new SimpleDateFormat("yyyy/MM/dd");
 
-	//raya
+	//raya test
 	@Test
 	public void testAjoutEmploye() {  	
 		//ajout Employe:
@@ -89,18 +86,5 @@ public class EmployeTest {
 	}
 	}
 	
-	/*
-	//Elyes
-	@Test
-	public void testAjoutTimeSheet() throws ParseException {  	
-		//ajout Time Sheet:
-		Mission m1=new Mission("test",  "test");
-		Employe e1=new Employe("khaled","Kalel","khaled.kalel@ssiiconsulting.tn",true,Role.INGENIEUR);
-		Date dateDebut = format.parse("2020/09/03");
-		Date dateFin = format.parse("2020/10/10");
-		Timesheet timesheet1=new Timesheet(m1,e1);
-		ts.ajouterTimesheet2(timesheet1);
-	}*/
-
 
 
