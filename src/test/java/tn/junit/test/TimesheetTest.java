@@ -63,7 +63,7 @@ public class TimesheetTest {
 	static String strDateDebut;
 	static String strDateFin;
 	
-	 @BeforeClass
+	 /*@BeforeClass
 	 public static void setUp() {
 		mapper = new ObjectMapper();
 		employeId=3;
@@ -121,5 +121,5 @@ public class TimesheetTest {
 		return missionList.get(missionList.size()-1).getId();
 	}
 	
-
+*/
 }
