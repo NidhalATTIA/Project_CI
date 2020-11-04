@@ -1,8 +1,6 @@
 package tn.esprit.spring.entities;
 
 import java.io.Serializable;
-import java.sql.Date;
-import java.time.LocalDate;
 
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
@@ -29,18 +27,7 @@ public class Timesheet implements Serializable{
 	private Employe employe;
 	
 	
-	public Timesheet() {
-		super();
-	}
-
-	public Timesheet(Mission mission, Employe employe) {
-		super();
-		this.mission = mission;
-		this.employe = employe;
-	}
-
 	private boolean isValide;
-	
 	
 
 	public boolean isValide() {
@@ -74,6 +61,7 @@ public class Timesheet implements Serializable{
 	public void setEmploye(Employe employe) {
 		this.employe = employe;
 	}
+	
 
 	
 	
