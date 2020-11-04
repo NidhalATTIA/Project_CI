@@ -1,6 +1,7 @@
 package tn.junit.test;
 
 import static org.junit.Assert.assertNotNull;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,22 +31,13 @@ public class EntrepriseTest {
 
 	@Test
 	public void testGetEntrepriseById() {
-<<<<<<< HEAD
 		es.getEntrepriseById(1);
 		assertNotNull(es.getEntrepriseById(1));
-=======
-		es.getEntrepriseById(3);
-		assertNotNull(es.getEntrepriseById(3));
->>>>>>> SaharBranche
 	}
 
 	@Test
 	public void testDeleteEntreprise() {
-<<<<<<< HEAD
 		es.deleteEntrepriseById(2);
-=======
-		es.deleteEntrepriseById(16);
->>>>>>> SaharBranche
 	}
 
 	@Test
@@ -53,8 +45,6 @@ public class EntrepriseTest {
 		Entreprise entreprise = new Entreprise(2);
 		emp.getAllEmployeByEntreprise(entreprise);
 		assertNotNull(emp.getAllEmployeByEntreprise(entreprise));
+
 	}
 }
-
-
-
