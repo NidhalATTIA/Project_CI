@@ -31,8 +31,8 @@ public class EntrepriseTest {
 
 	@Test
 	public void testGetEntrepriseById() {
-		es.getEntrepriseById(1);
-		assertNotNull(es.getEntrepriseById(1));
+		es.getEntrepriseById(39);
+		assertNotNull(es.getEntrepriseById(39));
 	}
 
 	@Test
