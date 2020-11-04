@@ -67,7 +67,6 @@ public class EmployeTest {
 	@Test
 	public void testdeleteEmployeById() {
 		es.deleteEmployeById(2);
-	
 	}
 	
 	@Test
