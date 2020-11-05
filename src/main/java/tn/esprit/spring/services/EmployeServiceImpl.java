@@ -99,16 +99,21 @@ public class EmployeServiceImpl implements IEmployeService {
 	}
 
 	public int ajouterContrat(Contrat contrat) {
+		l.info("je viens d'ajouter un contrat");
 		contratRepoistory.save(contrat);
+		l.info("contrat ajouté");
 		return contrat.getReference();
 	}
 
 	public void affecterContratAEmploye(int contratId, int employeId) {
+		l.info("je viens d'affecter le contrat a un emloye");
 		Contrat contratManagedEntity = contratRepoistory.findById(contratId).get();
 		Employe employeManagedEntity = employeRepository.findById(employeId).get();
 
 		contratManagedEntity.setEmploye(employeManagedEntity);
 		contratRepoistory.save(contratManagedEntity);
+		l.info("emloye affecté");
+
 		
 	}
 
@@ -145,6 +150,8 @@ public class EmployeServiceImpl implements IEmployeService {
 		if (Contratop.isPresent() ){
 		Contrat contratManagedEntity = Contratop.get();
 		contratRepoistory.delete(contratManagedEntity);
+		l.info("contrat deleted");
+
 		}
 	}
 

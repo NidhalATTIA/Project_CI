@@ -29,7 +29,7 @@ public class ContratTest {
 	IEmployeService es;
 	ITimesheetService ts;
 	
-	/*@Test
+	@Test
 	public void testAjoutContrat() throws ParseException {
 		SimpleDateFormat f=new SimpleDateFormat("dd/mm/yyyy");
 
@@ -37,13 +37,13 @@ public class ContratTest {
 		Contrat c=new Contrat(d,"engineer",1254f);
 		es.ajouterContrat(c);
 		assertNotNull(es.ajouterContrat(c));
-	}*/
+	}
 	
-	@Test
+	/*@Test
 	public void testAffecterContratEmploye() throws ParseException {
 		es.affecterContratAEmploye(30, 2);
 
-	}
+	}*/
 	
 /*	@Test
 	public void testDeleteContart() throws ParseException {
