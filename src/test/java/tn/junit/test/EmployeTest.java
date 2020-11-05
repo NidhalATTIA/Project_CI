@@ -1,10 +1,9 @@
 package tn.junit.test;
 
-<<<<<<< HEAD
-=======
+
 import static org.junit.Assert.*;
 
->>>>>>> SaharBranche
+
 import org.junit.Test;
 import static org.junit.Assert.assertNotNull;
 import java.time.LocalDate;
@@ -30,7 +29,6 @@ public class EmployeTest {
 	LocalDate dateFin = LocalDate.now();
 	
 
-<<<<<<< HEAD
 	//raya test
 	@Test
 	public void testAjoutEmploye() {  	
@@ -90,36 +88,6 @@ public class EmployeTest {
 		es.getAllEmployes();
 		assertNotNull(es.getAllEmployes());
 	}
-	}
+
 	
-=======
-	// raya
-	@Test
-	public void testAjoutEmploye() {
-
-		// ajout Employe:
-		Employe employe1 = new Employe("khaled", "Kalel", "khaled.kalel@ssiiconsulting.tn", true, Role.INGENIEUR);
-		es.ajouterEmploye(employe1);
-		assertNotNull(es.ajouterEmploye(employe1));
->>>>>>> SaharBranche
-
-		Employe employe2 = new Employe("Mouhamed", "Zitouni", "mohamed.zitouni@ssiiconsulting.tn", false,
-				Role.TECHNICIEN);
-		es.ajouterEmploye(employe2);
-		assertNotNull(es.ajouterEmploye(employe2));
-
-		Employe employe3 = new Employe("Aymen", "ouali", "aymen.ouali@ssiiconsulting.tn", true, Role.INGENIEUR);
-		es.ajouterEmploye(employe3);
-		assertNotNull(es.ajouterEmploye(employe3));
-
-		Employe employe4 = new Employe("bochra", "bouzid", "bochra.bouzid@ssiiconsulting.tn", true,
-				Role.CHEF_DEPARTEMENT);
-		es.ajouterEmploye(employe4);
-		assertNotNull(es.ajouterEmploye(employe4));
-
-		Employe employe5 = new Employe("yosra", "arbi", "yosra.arbi@ssiiconsulting.tn", true, Role.CHEF_DEPARTEMENT);
-		es.ajouterEmploye(employe5);
-		assertNotNull(es.ajouterEmploye(employe5));
-
-	}
 }
