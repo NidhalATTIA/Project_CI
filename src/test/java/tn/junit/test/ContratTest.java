@@ -24,34 +24,32 @@ import tn.esprit.spring.services.ITimesheetService;
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = TimesheetSpringBootCoreDataJpaMvcRest1Application.class)
 public class ContratTest {
-	//oumayma
 	@Autowired 
 	IEmployeService es;
 	ITimesheetService ts;
 	
-	@Test
+	/*@Test
 	public void testAjoutContrat() throws ParseException {
 		SimpleDateFormat f=new SimpleDateFormat("dd/mm/yyyy");
 
 		Date d=f.parse("20/11/2001");
-		Contrat c=new Contrat(d,"engineer",1254f);
+		Contrat c=new Contrat(d,"prof",1254f);
 		es.ajouterContrat(c);
 		assertNotNull(es.ajouterContrat(c));
-	}
+	}*/
 	
 	/*@Test
 	public void testAffecterContratEmploye() throws ParseException {
-		es.affecterContratAEmploye(30, 2);
+		es.affecterContratAEmploye(36, 1);
 
-	}*/
-	
-/*	@Test
+	}
+	*/
+@Test
 	public void testDeleteContart() throws ParseException {
 		es.deleteContratById(31);
 
 	}
-*/
-	
+
 
 	
 
