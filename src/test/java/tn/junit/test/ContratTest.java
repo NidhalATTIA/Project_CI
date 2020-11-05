@@ -24,7 +24,7 @@ import tn.esprit.spring.services.ITimesheetService;
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = TimesheetSpringBootCoreDataJpaMvcRest1Application.class)
 public class ContratTest {
-	//oumayma
+	//oumaymaTest
 	@Autowired 
 	IEmployeService es;
 	ITimesheetService ts;
@@ -42,11 +42,13 @@ public class ContratTest {
 	@Test
 	public void testAffecterContratEmploye() throws ParseException {
 		es.affecterContratAEmploye(1, 1);
+
 	}
 	
 	@Test
 	public void testDeleteContart() throws ParseException {
 		es.deleteContratById(1);
+
 	}
 
 	
