@@ -46,9 +46,9 @@ public class EmployeTest {
 		es.ajouterEmploye(employe3);
 		assertNotNull(es.ajouterEmploye(employe3));
 		
-		Employe employe4=new Employe("bochra","bouzid","bochra.bouzid@ssiiconsulting.tn",true,Role.CHEF_DEPARTEMENT);
+		/*Employe employe4=new Employe("bochra","bouzid","bochra.bouzid@ssiiconsulting.tn",true,Role.CHEF_DEPARTEMENT);
 		es.ajouterEmploye(employe4);
-		assertNotNull(es.ajouterEmploye(employe4));
+		assertNotNull(es.ajouterEmploye(employe4));*/
 		
 		Employe employe5=new Employe("yosra","arbi","yosra.arbi@ssiiconsulting.tn",true,Role.CHEF_DEPARTEMENT);
 		es.ajouterEmploye(employe5);
