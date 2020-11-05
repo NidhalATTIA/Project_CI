@@ -104,17 +104,13 @@ public class EmployeServiceImpl implements IEmployeService {
 	}
 
 	public void affecterContratAEmploye(int contratId, int employeId) {
-		Optional<Employe> employeop= this.employeRepository.findById(employeId);
-		Optional<Contrat> Contratop= this.contratRepoistory.findById(employeId);
-		
-		if(employeop.isPresent() && Contratop.isPresent()){
-		Contrat contratManagedEntity = Contratop.get();
-		Employe employeManagedEntity = employeop.get();
+		Contrat contratManagedEntity = contratRepoistory.findById(contratId).get();
+		Employe employeManagedEntity = employeRepository.findById(employeId).get();
 
 		contratManagedEntity.setEmploye(employeManagedEntity);
 		contratRepoistory.save(contratManagedEntity);
 		
-	}}
+	}
 
 	public String getEmployePrenomById(int employeId) {
 		l.debug("Je viens de lancer getEmployePrenomById. " );
