@@ -234,3 +234,18 @@ Verify the connector's configuration, identify and stop any process that's liste
 2020-11-03 21:27:14.217  INFO 11224 --- [Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2020-11-03 21:27:14.220  INFO 11224 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2020-11-03 21:27:14.231  INFO 11224 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-11-05 11:06:49.481  INFO 6768 --- [main] tn.junit.test.MissionTest                : Starting MissionTest on DESKTOP-10HF8RU with PID 6768 (started by Sarrah in C:\Users\Sarrah\Desktop\projet\Project_CI)
+2020-11-05 11:06:49.598  INFO 6768 --- [main] tn.junit.test.MissionTest                : No active profile set, falling back to default profiles: default
+2020-11-05 11:06:54.603  INFO 6768 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-11-05 11:06:55.117  INFO 6768 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 470ms. Found 6 repository interfaces.
+2020-11-05 11:06:57.379  INFO 6768 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$80f7e5ce] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-05 11:06:58.379  INFO 6768 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-05 11:06:59.981  INFO 6768 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-05 11:07:00.636  INFO 6768 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-11-05 11:07:01.255  INFO 6768 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
+2020-11-05 11:07:01.261  INFO 6768 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-11-05 11:07:02.478  INFO 6768 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-11-05 11:07:07.406  INFO 6768 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-11-05 11:07:14.148  INFO 6768 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
